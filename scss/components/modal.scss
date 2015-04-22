@@ -39,8 +39,10 @@
   .modal--service__studies {
     color: $brand-primary;
     position: absolute;
-      bottom: 20px;
-      right: 20px;
+      bottom: 0px;
+      right: 0px;
+    font-family: "fairviewregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
   }
 
 }

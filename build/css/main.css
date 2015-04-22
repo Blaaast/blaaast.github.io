@@ -7057,8 +7057,10 @@ h1, .h1 {
 .modal--service .modal--service__studies {
   color: #E44A2B;
   position: absolute;
-  bottom: 20px;
-  right: 20px; }
+  bottom: 0px;
+  right: 0px;
+  font-family: "fairviewregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px; }
 
 .modal--tech .modal-header {
   background: #000 url(/build/img/services/tech-bg.png) no-repeat 0 0; }

@@ -38,12 +38,14 @@ export default class Modal {
   }
 
   openModal(modal, modalBackdrop) {
+    let modalDialog = modal.querySelector('.modal-dialog');
+
     // Add class to kill the body's scroll
     this.body.classList.add('modal-open');
     // Manage the modal showing
     modal.style.display = 'block';
     modalBackdrop.style.display = 'block';
-    modalBackdrop.style.height = parseFloat(modal.offsetHeight + 60) + 'px';
+    modalBackdrop.style.height = parseFloat(modalDialog.offsetHeight + 60) + 'px';
     modal.classList.add('in');
     modalBackdrop.classList.add('in');
   }
