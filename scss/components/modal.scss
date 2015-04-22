@@ -1,0 +1,54 @@
+.modal--service {
+
+  .modal-dialog {
+    width: 960px;
+    max-width: 100%;
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
+
+  .modal-header {
+    padding: 0;
+    text-align: center;
+    background-size: cover;
+    color: #fff;
+    border-bottom: 4px solid $brand-primary;
+  }
+
+  .modal-title {
+    font-size: 72px;
+    padding-bottom: 60px;
+  }
+
+  .services__item__img {
+    padding-top: 100px;
+    width: 387px;
+    max-width: 100%;
+  }
+
+  .modal-body {
+    padding: 80px;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .modal--service__studies {
+    color: $brand-primary;
+    position: absolute;
+      bottom: 20px;
+      right: 20px;
+  }
+
+}
+
+.modal--tech {
+
+  .modal-header {
+    background: #000 url(/build/img/services/tech-bg.png) no-repeat 0 0;
+  }
+
+}
