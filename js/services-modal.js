@@ -22,8 +22,6 @@ export default class Modal {
     let modalBackdrop = modal.querySelector('.modal-backdrop');
     let modalClose = modal.querySelector('.js-modal-close');
 
-    console.log('Selected: ', serviceSelected);
-
     // Toggle the modal on click on the backdrop
     modalBackdrop.addEventListener('click', () => {
       this.closeModal(modal, modalBackdrop);
@@ -44,10 +42,18 @@ export default class Modal {
 
     // Add class to kill the body's scroll
     this.body.classList.add('modal-open');
+
     // Manage the modal showing
     modal.style.display = 'block';
     modalBackdrop.style.display = 'block';
-    modalBackdrop.style.height = parseFloat(modalDialog.offsetHeight + 60) + 'px';
+
+    const dialogHeight = parseFloat(modalDialog.offsetHeight + 60);
+    const windowHeight = parseFloat(window.innerHeight + 60);
+    const largestHeight = dialogHeight < windowHeight
+      ? windowHeight
+      : dialogHeight;
+
+    modalBackdrop.style.height = parseFloat(largestHeight) + 'px';
     modal.classList.add('in');
     modalBackdrop.classList.add('in');
   }
