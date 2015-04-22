@@ -7064,3 +7064,12 @@ h1, .h1 {
 
 .modal--tech .modal-header {
   background: #000 url(/build/img/services/tech-bg.png) no-repeat 0 0; }
+
+.modal--newmarket .modal-header {
+  background: #000 url(/build/img/services/newmarket-bg.png) no-repeat 0 0; }
+
+.modal--training .modal-header {
+  background: #000 url(/build/img/services/training-bg.png) no-repeat 0 0; }
+
+.modal--positive .modal-header {
+  background: #000 url(/build/img/services/positive-bg.png) no-repeat 0 0; }

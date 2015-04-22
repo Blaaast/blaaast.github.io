@@ -22,6 +22,8 @@ export default class Modal {
     let modalBackdrop = modal.querySelector('.modal-backdrop');
     let modalClose = modal.querySelector('.js-modal-close');
 
+    console.log('Selected: ', serviceSelected);
+
     // Toggle the modal on click on the backdrop
     modalBackdrop.addEventListener('click', () => {
       this.closeModal(modal, modalBackdrop);
