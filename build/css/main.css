@@ -7071,5 +7071,7 @@ h1, .h1 {
 .modal--training .modal-header {
   background: #000 url(/build/img/services/training-bg.png) no-repeat 0 0; }
 
+.modal--positive .services__item__img {
+  padding-top: 80px; }
 .modal--positive .modal-header {
   background: #000 url(/build/img/services/positive-bg.png) no-repeat 0 0; }
