@@ -1,0 +1,24 @@
+{{> head}}
+
+  {{>nav}}
+
+  <article>
+    {{> cs-header caseId=1}}
+
+    {{> cs-content
+        title='hiring@ticket'
+        subtitle='Client: Ticket for Change'
+        intro='Ticket for Change is a french start-up which goal is to gather young people around subjects that matters with their “Tour de France of Social Entrepreneuship”'
+        cta=cta-1
+        content='<p>The applications they receive for this “Tour de France” are growing, and managing them is hard. They came to Blaaast to get a solution to better manage the applications they receive.</p><p>The key challenge of this project was to define the data needed to rate and pick the right participants for this “Tour de France”. We worked closely with the client to understand the skills needed by the participants to fit in their program.</p><p>This research work helped us create a taylor-made platform that gave our client exactly what he needed to focus on choosing the best participants: an easy to use interface for people applying for the “Tour de France” and a powerful back-office for correctors.</p><p>We used Node.js and Ember.js, two leading web technologies, to provide a fluid user experience coupled with powerful algorythms and optimal security.</p><p>Our client had full access to all the data in real-time thanks to live database exports to Google Spreadsheet (ranking of each participants who has validated its application and which application has been corrected).</p><p>As a result, 1200 accounts were created and Ticket for Change was able to easily process all this data to find its 50 special participants.</p>'
+        skills=skills-1
+    }}
+
+    {{> cs-footer
+        caseId=1
+        nextCS=next-1
+    }}
+  </article>
+
+{{!-- Bottom scripts and GA --}}
+{{> bottom}}

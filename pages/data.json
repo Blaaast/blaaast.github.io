@@ -1,0 +1,27 @@
+{
+  "cta-1": {
+    "url": "https://apply.ticketforchange.org",
+    "value": "View the website"
+  },
+  "skills-1": [
+    "Web development",
+    "Responsive web design",
+    "Web design",
+    "Multi-accounts/roles back-office",
+    "Data analysis"
+  ],
+  "next-1": "/case-studies-2",
+
+  "cta-2": {
+    "url": "https://apply.ticketforchange.org",
+    "value": "View the website"
+  },
+  "skills-2": [
+    "Web development",
+    "Responsive web design",
+    "Web design",
+    "Multi-accounts/roles back-office",
+    "Data analysis"
+  ],
+  "prev-2": "/case-studies-1"
+}

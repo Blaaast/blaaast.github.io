@@ -26,7 +26,10 @@ var path = require('path'),
   babelify = require('babelify'),
   browserify = require('browserify'),
   source = require('vinyl-source-stream'),
-  buffer = require('vinyl-buffer');
+  buffer = require('vinyl-buffer'),
+
+  handlebars = require('gulp-compile-handlebars'),
+  data = require('gulp-data');
 
 gulp.task('connect', function() {
   return connect.server({
@@ -122,11 +125,11 @@ gulp.task('minify-css', function() {
 });
 
 // HTML reload on changes
-gulp.task('html', function() {
-  return gulp.src('./*.html')
-    .pipe( plumber() )
-    .pipe( connect.reload() )
-});
+// gulp.task('html', function() {
+//   return gulp.src('./*.html')
+//     .pipe( plumber() )
+//     .pipe( connect.reload() )
+// });
 
 // Images tasks
 gulp.task('img', ['img-default']);
@@ -155,9 +158,47 @@ gulp.task('img-clients', function() {
     .pipe( gulp.dest('build/img/clients') );
 });
 
+
+// HTML reload on changes
+gulp.task('html', function() {
+  // var manifest = gulp.src('./build/rev-manifest.json');
+  var webpages = [
+    'pages/index.hbs',
+    'pages/case-studies/*.hbs'
+  ];
+
+  var partials = [
+    './pages/partials',
+    './pages/homepage',
+    './pages/case-studies/components',
+  ];
+
+  return gulp.src(webpages)
+    .pipe(data(function(file) {
+      return require('./pages/data.json');
+    }))
+    .pipe(handlebars({}, {
+      batch : partials
+    }))
+    // .pipe( rename('index.html'))
+    .pipe(rename(function (path) {
+      var s;
+      if (path.basename !== 'index' && path.basename.indexOf('-index') > -1) {
+        s = path.basename.substring(0, path.basename.indexOf('-index'))
+        path.dirname += '/' + s;
+        path.basename = 'index';
+      }
+      path.extname = '.html';
+    }))
+    .pipe( gulp.dest('./'))
+    .pipe( plumber() )
+    .pipe( connect.reload() );
+});
+
+
 /* Default task */
 gulp.task('default', ['connect', 'watch'], function() {
-  gulp.start('css', 'js');
+  gulp.start('html', 'css', 'js');
 });
 
 /* Build static resources */
@@ -177,5 +218,5 @@ gulp.task('deploy', ['build-resources'], function() {
 gulp.task('watch', function() {
   gulp.watch('./scss/**/*.scss', ['css']);
   gulp.watch('./js/**/*.js', ['js']);
-  gulp.watch('./*.html', ['html']);
+  gulp.watch('./**/*.hbs', ['html']);
 });

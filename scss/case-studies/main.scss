@@ -1,0 +1,97 @@
+.case-study-header {
+  padding: 0;
+  height: 80%;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-bottom: 10px solid $brand-orange;
+}
+.case-study-footer {
+  z-index: -1;
+  padding: 0;
+  height: 80%;
+  background-position: 50% 100%;
+  background-size: cover;
+}
+.case-study-header-1 {
+  background-image: url(/build/img/cs/1.png);
+}
+.case-study-footer-1 {
+  background-image: url(/build/img/cs/1-footer.png);
+}
+
+.cs-title {
+  padding: 100px 0;
+  font-size: 92px;
+
+  small {
+    display: block;
+    font-size: 11px;
+    font-family: arial;
+    text-transform: none;
+  }
+}
+
+.cs-intro {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.cs-cta a {
+  border: 2px solid $brand-orange;
+  padding: 10px 20px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $brand-orange;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.cs-content p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #767676;
+}
+
+.cs-skills {
+  z-index: 10;
+  padding: 40px;
+  background-color: $brand-orange;
+  color: #fff;
+  width: 320px;
+  margin: 100px 0 -100px;
+
+  h2 {
+    margin-top: 0;
+    font-size: 48px;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin: 0;
+
+    li {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}
+
+.cs-nav {
+  .container {
+    padding: 100px 0;
+  }
+
+  a {
+    border: 0;
+    background: #F2F2F2;
+    padding: 30px;
+
+    &:hover {
+      background: $brand-orange;
+      color: #fff;
+    }
+  }
+}
