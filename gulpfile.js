@@ -28,8 +28,42 @@ var path = require('path'),
   source = require('vinyl-source-stream'),
   buffer = require('vinyl-buffer'),
 
+  awspublish = require('gulp-awspublish'),
+  parallelize = require('concurrent-transform'),
+
   handlebars = require('gulp-compile-handlebars'),
-  data = require('gulp-data');
+  data = require('gulp-data'),
+  rev = require('gulp-rev'),
+  revReplace = require('gulp-rev-replace'),
+
+  git = require('gulp-git'),
+  bump = require('gulp-bump'),
+  filter = require('gulp-filter'),
+  tag_version = require('gulp-tag-version');
+
+function inc(importance) {
+  // get all the files to bump version in
+  return gulp.src(['./package.json', './bower.json'])
+    // bump the version number in those files
+    .pipe(bump({ type: importance }))
+    // save it back to filesystem
+    .pipe(gulp.dest('./'))
+    // commit the changed version number
+    .pipe(git.commit('bumps package version'))
+
+    // read only one file to get the version number
+    .pipe(filter('package.json'))
+    // **tag it in the repository**
+    .pipe(tag_version());
+}
+
+// All the html pages
+var htmlPages = [
+  './index.html',
+  './case-studies/**/*',
+  './case-studies-1/**/*',
+  './case-studies-2/**/*'
+];
 
 gulp.task('connect', function() {
   return connect.server({
@@ -39,6 +73,26 @@ gulp.task('connect', function() {
 });
 
 // JS tasks
+// gulp.task('js', function() {
+//   browserify({
+//     entries: './js/main.js',
+//     debug: true
+//   })
+//   .transform( babelify )
+//   .transform( babelify.configure({
+//     sourceMapRelative: path.join(process.pwd + '/js')
+//   }))
+//   .bundle()
+//   .pipe( source('all.js') )
+//   .pipe( buffer() )
+//   .pipe( addsrc.prepend('./js/vendor/*.js') )
+//   .pipe( concat('all.js') )
+//   .pipe( gulp.dest('./build/js/') )
+//   .pipe( connect.reload() ).on('error', function() {
+//     notify('JS task error!')
+//   })
+// });
+
 gulp.task('js', function() {
   browserify({
     entries: './js/main.js',
@@ -53,14 +107,34 @@ gulp.task('js', function() {
   .pipe( buffer() )
   .pipe( addsrc.prepend('./js/vendor/*.js') )
   .pipe( concat('all.js') )
-  .pipe( gulp.dest('./build/js/') )
-  .pipe( connect.reload() ).on('error', function() {
-    notify('JS task error!')
-  })
+  .pipe( gulp.dest('./build/js') )
+  .pipe( connect.reload() );
 });
 
+// gulp.task('uglify', function() {
+//   browserify({
+//     entries: './js/main.js'
+//   })
+//   .transform( babelify )
+//   .transform( babelify.configure({
+//     sourceMapRelative: path.join(process.pwd + '/js')
+//   }))
+//   .bundle()
+//   .pipe( source('all.js') )
+//   .pipe( buffer() )
+//   .pipe( uglify() )
+//   .pipe( addsrc.prepend('./js/vendor/*.js') )
+//   .pipe( concat('all.js') )
+//   .pipe( gulp.dest('./build/js/') )
+//   .pipe( connect.reload() ).on('error', function() {
+//     notify('JS task error!')
+//   })
+// });
+
 gulp.task('uglify', function() {
-  browserify({
+  var manifest = gulp.src('./build/rev-manifest.json');
+
+  return browserify({
     entries: './js/main.js'
   })
   .transform( babelify )
@@ -73,24 +147,37 @@ gulp.task('uglify', function() {
   .pipe( uglify() )
   .pipe( addsrc.prepend('./js/vendor/*.js') )
   .pipe( concat('all.js') )
-  .pipe( gulp.dest('./build/js/') )
-  .pipe( connect.reload() ).on('error', function() {
-    notify('JS task error!')
-  })
+  .pipe( rev() )
+  .pipe( gulp.dest('./build/js') )
+  .pipe( revReplace({ manifest: manifest }) )
+  .pipe( gulp.dest('./build/js') )
+  .pipe( rev.manifest({
+    path: 'build/rev-manifest.json',
+    merge: true,
+    base: process.cwd() + '/build'
+  }))
+  .pipe( gulp.dest('./build') );
 });
 
-// SCSS tasks
+
 gulp.task('css', function() {
   return gulp.src('./scss/main.scss')
-    .pipe( sass() )
+    .pipe( sourcemaps.init())
+    .pipe( sass({
+      errLogToConsole: true
+    }) )
+    .pipe( sourcemaps.write() )
     .pipe( gulp.dest('./build/css') )
     .pipe( connect.reload() )
 });
 
-gulp.task('uncss', function() {
-  return gulp.src('./build/css/*.css')
+gulp.task('minify-css', function() {
+  var manifest = gulp.src('./build/rev-manifest.json');
+
+  return gulp.src('./scss/main.scss')
+    .pipe( sass() )
     .pipe( uncss({
-      html: ['index.html'],
+      html: htmlPages,
       // To make Bootstrap work
       ignore: [
         /(#|\.)fancybox(\-[a-zA-Z]+)?/,
@@ -110,18 +197,24 @@ gulp.task('uncss', function() {
         /(#|\.)(open)/,
         // currently only in a IE conditional, so uncss doesn't see it
         '.close',
-        '.alert-dismissible'
-      ]
-    }) )
-    .pipe( plumber() )
-    .pipe( gulp.dest('./build/css') )
-});
+        '.alert-dismissible',
 
-gulp.task('minify-css', function() {
-  return gulp.src('./build/css/*.css')
+        '.landing-title.show-input .landing-title__edit',
+        '.landing-title.show-input .landing-title__input'
+      ]
+    }))
     .pipe( minifyCSS() )
-    .pipe( plumber() )
+    .pipe( rev() )
     .pipe( gulp.dest('./build/css') )
+    .pipe( revReplace({ manifest: manifest }) )
+    .pipe( gulp.dest('./build/css') )
+    .pipe( rev.manifest({
+      path: 'build/rev-manifest.json',
+      merge: true,
+      base: process.cwd() + '/build'
+    }))
+    .pipe( gulp.dest('./build') )
+    .pipe( plumber() )
 });
 
 // HTML reload on changes
@@ -156,6 +249,19 @@ gulp.task('img-clients', function() {
     .pipe( changed('build/img/clients') )
     .pipe( imageResize({ width : 224 }) )
     .pipe( gulp.dest('build/img/clients') );
+});
+
+gulp.task('img-deploy', function() {
+  return gulp.src('img/**')
+    .pipe( plumber() )
+    .pipe( rev() )
+    .pipe( gulp.dest('./build/img') )
+    .pipe( rev.manifest({
+      path: 'build/rev-manifest.json',
+      merge: true,
+      base: process.cwd() + '/build'
+    }) )
+    .pipe( gulp.dest('./build') );
 });
 
 
@@ -195,6 +301,164 @@ gulp.task('html', function() {
     .pipe( connect.reload() );
 });
 
+gulp.task('html-deploy', ['compress-images'], function() {
+  var manifest = gulp.src('./build/rev-manifest.json');
+
+  // return gulp.src('pages/index.hbs')
+  var webpages = [
+    'pages/index.hbs',
+    'pages/case-studies/*.hbs'
+  ];
+
+  var partials = [
+    './pages/partials',
+    './pages/homepage',
+    './pages/case-studies/components',
+  ];
+
+  return gulp.src(webpages)
+    .pipe(data(function(file) {
+      return require('./pages/data.json');
+    }))
+    .pipe(handlebars({}, {
+      batch : partials
+    }))
+    // .pipe( rename('index.html'))
+    .pipe(rename(function (path) {
+      var s;
+      if (path.basename !== 'index' && path.basename.indexOf('-index') > -1) {
+        s = path.basename.substring(0, path.basename.indexOf('-index'))
+        path.dirname += '/' + s;
+        path.basename = 'index';
+      }
+      path.extname = '.html';
+    }))
+    .pipe( gulp.dest('./'))
+    .pipe( revReplace({ manifest: manifest }) )
+    .pipe( gulp.dest('./'));
+});
+
+// Deploy to S3
+gulp.task('publish', ['patch'], function() {
+  // commit files to be published
+  // gulp.src('./')
+  //   .pipe(git.add())
+  //   .pipe(git.commit('Add hashed assets'));
+
+  // create a new publisher using S3 options
+  var publisher = awspublish.create({
+    params: {
+      Bucket: 'www.blaaast.co'
+    },
+    accessKeyId: process.env.AWS_STATIC_HOST_KEY,
+    secretAccessKey: process.env.AWS_STATIC_HOST_SECRET,
+    region: 'eu-central-1'
+  });
+
+  // define custom header s
+  var headers = {
+    'Content-Type': 'text/html'
+  }; // No cache for index.html
+  var headersStatics = {
+    'Cache-Control': 'max-age=315360000, no-transform, public'
+  };
+
+  // Bump minor semver
+  // gulp.src('./package.json')
+    // .pipe(tag_version())
+    // .pipe(gulp.dest('./'));
+
+  htmlPages.forEach(function (page) {
+    return gulp.src(page)
+      .pipe(rename(function (path) {
+        if (page.split('/')[1] !== 'index.html') {
+          path.dirname = page.split('/')[1];
+        }
+      }))
+      .pipe(awspublish.gzip({ ext: '.gz' }))
+      .pipe(publisher.publish(headers, {
+        // Always update index.html
+        force: true
+      }))
+      .pipe(awspublish.reporter());
+  });
+
+  gulp.src('./fonts/**')
+    .pipe(rename(function (path) {
+      path.dirname = 'fonts/' + path.dirname;
+    }))
+    .pipe(awspublish.gzip())
+    .pipe(parallelize(publisher.publish(headersStatics), 50))
+    .pipe(publisher.cache())
+    .pipe(awspublish.reporter());
+
+  // Favicon upload
+  gulp.src(['./*.png', './manifest.json', './*.ico'])
+    .pipe(awspublish.gzip())
+    .pipe(parallelize(publisher.publish(headersStatics), 50))
+    .pipe(publisher.cache())
+    .pipe(awspublish.reporter());
+
+  return gulp.src('./build/**')
+    .pipe(rename(function (path) {
+      path.dirname = 'build/' + path.dirname;
+    }))
+    .pipe(awspublish.gzip())
+    .pipe(parallelize(publisher.publish(headersStatics), 50))
+    .pipe(publisher.cache())
+    .pipe(awspublish.reporter());
+});
+
+// Deploy to beta
+gulp.task('publish-beta', function() {
+
+  // create a new publisher using S3 options
+  var publisher = awspublish.create({
+    params: {
+      Bucket: 'blaaast-beta'
+    },
+    accessKeyId: process.env.AWS_STATIC_HOST_KEY,
+    secretAccessKey: process.env.AWS_STATIC_HOST_SECRET,
+    region: 'eu-central-1'
+  });
+
+  // define custom headers
+  var headers = {};
+  var headersStatics = {
+    'Cache-Control': 'max-age=315360000, no-transform, public'
+  };
+
+  // Bump minor semver
+  gulp.src('./package.json')
+    // .pipe(tag_version())
+    // .pipe(gulp.dest('./'));
+
+  gulp.src(htmlPages)
+    .pipe(awspublish.gzip({ ext: '.gz' }))
+    .pipe(publisher.publish(headers, {
+      // Always update index.html
+      force: true
+    }))
+    .pipe(awspublish.reporter());
+
+  gulp.src('./fonts/**')
+    .pipe(rename(function (path) {
+      path.dirname = 'fonts/' + path.dirname;
+    }))
+    .pipe(awspublish.gzip())
+    .pipe(parallelize(publisher.publish(headersStatics), 50))
+    .pipe(publisher.cache())
+    .pipe(awspublish.reporter());
+
+  return gulp.src('./build/**')
+    .pipe(rename(function (path) {
+      path.dirname = 'build/' + path.dirname;
+    }))
+    .pipe(awspublish.gzip())
+    .pipe(parallelize(publisher.publish(headersStatics), 50))
+    .pipe(publisher.cache())
+    .pipe(awspublish.reporter());
+});
 
 /* Default task */
 gulp.task('default', ['connect', 'watch'], function() {
@@ -205,13 +469,24 @@ gulp.task('default', ['connect', 'watch'], function() {
 gulp.task('build-resources', ['css']);
 
 /* Compress static resources */
-gulp.task('compress-resources', ['uncss', 'uglify'], function() {
-  gulp.start('minify-css');
-});
+// gulp.task('compress-resources', ['uncss', 'uglify'], function() {
+//   gulp.start('minify-css');
+// });
 
 /* Deploy task */
-gulp.task('deploy', ['build-resources'], function() {
+// gulp.task('deploy', ['build-resources'], function() {
+//   gulp.start('compress-resources');
+// });
+
+/* Compress static resources */
+gulp.task('compress-images', ['img-deploy'], function () {
   gulp.start('compress-resources');
+});
+gulp.task('compress-resources', ['uglify', 'minify-css']);
+
+/* Deploy task */
+gulp.task('deploy', /*['clean'],*/ function() {
+  gulp.start('html-deploy');
 });
 
 /* Watch task */
@@ -220,3 +495,7 @@ gulp.task('watch', function() {
   gulp.watch('./js/**/*.js', ['js']);
   gulp.watch('./**/*.hbs', ['html']);
 });
+
+gulp.task('patch', function() { return inc('patch'); })
+gulp.task('feature', function() { return inc('minor'); })
+gulp.task('release', function() { return inc('major'); })

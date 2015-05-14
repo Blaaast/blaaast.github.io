@@ -10,7 +10,9 @@ export default class Modal {
 
   init() {
     let servicesDetails = document.querySelector('.services');
-    servicesDetails.addEventListener('click', this.showServiceDetails.bind(this), false);
+    if (servicesDetails !== null) {
+      servicesDetails.addEventListener('click', this.showServiceDetails.bind(this), false);
+    }
   }
 
   showServiceDetails(e) {

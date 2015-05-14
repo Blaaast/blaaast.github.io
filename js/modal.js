@@ -8,10 +8,11 @@ export default class Modal {
     this.modalButton = document.getElementById('modal-copyright-btn');
     this.modal = document.getElementById('modal-copyright');
     this.modalDialog = document.querySelector('.modal-dialog');
-    this.modalBackdrop = this.modal.querySelector('.modal-backdrop');
-    this.modalClose = this.modal.querySelectorAll('.js-modal-legal-close');
-
-    this.init();
+    if (this.modal !== null) {
+      this.modalBackdrop = this.modal.querySelector('.modal-backdrop');
+      this.modalClose = this.modal.querySelectorAll('.js-modal-legal-close');
+      this.init();
+    }
   }
 
   init() {
