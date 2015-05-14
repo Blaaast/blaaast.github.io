@@ -1,6 +1,6 @@
 {
   "name": "blaaast.github.io",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "The website of Blaaast",
   "main": "gulpfile.js",
   "devDependencies": {
@@ -51,6 +51,7 @@
     "type": "git",
     "url": "https://github.com/Blaaast/blaaast.github.io.git"
   },
+  "cloudfront-origin": "d2u6q8s5aws5dl.cloudfront.net",
   "author": "",
   "license": "ISC",
   "bugs": {
