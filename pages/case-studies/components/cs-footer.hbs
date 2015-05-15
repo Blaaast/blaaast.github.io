@@ -1,14 +1,89 @@
-<section class="case-study-footer case-study-footer-{{caseId}}">
+{{#if footer-type-image}}
+  <section class="case-study-footer case-study-footer-{{caseId}}"></section>
+{{/if}}
 
-</section>
+{{#if footer-type-video}}
+  <section class="case-study-footer-video">
+    <div class="container">
+      <div class="videoWrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cTxYQKmz-dw" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+{{/if}}
+
+{{#if footer-type-timeline}}
+  <section class="case-study-footer-timeline">
+
+    <div class="container">
+      <div id="masonry"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js" charset="utf-8"></script>
+    <script>window.twttr = (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0],t = window.twttr || {};if (d.getElementById(id)) return t;js = d.createElement(s);js.id = id;js.src = "https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, "script", "twitter-wjs"));</script>
+
+    <script>
+      twttr.ready(function (twttr) {
+
+        var timer = 0;
+
+        twttr.events.bind('loaded', function(event) { console.log('loaded'); });
+
+        var ids = [{{tweet-ids}}];
+
+        var container = document.querySelector('#masonry');
+        var msnry = new Masonry( container, {
+          itemSelector: '.twitter-tweet'
+        });
+
+        twttr.widgets.createTweet(
+          '597764071660908544',
+          document.getElementById('masonry')
+        )
+        .then(function (el) {
+          msnry.appended( el );
+          msnry.layout();
+        });
+
+        twttr.widgets.createTweet(
+          '598560075381366785',
+          document.getElementById('masonry')
+        )
+        .then(function (el) {
+          msnry.appended( el );
+          msnry.layout();
+        });
+
+        twttr.widgets.createTweet(
+          '598760931099865088',
+          document.getElementById('masonry')
+        )
+        .then(function (el) {
+          msnry.appended( el );
+          msnry.layout();
+        });
+
+        twttr.widgets.createTweet(
+          '598513738916978688',
+          document.getElementById('masonry')
+        )
+        .then(function (el) {
+          msnry.appended( el );
+          msnry.layout();
+        });
+
+      });
+    </script>
+  </section>
+{{/if}}
 
 <section class="cs-nav">
   <div class="container clearfix">
     {{#if prevCS}}
-      <a href="{{prevCS}}" class="pull-left">Previous case study</a>
+      <a href="{{prevCS}}" class="pull-left"><< Previous case study</a>
     {{/if}}
     {{#if nextCS}}
-      <a href="{{nextCS}}" class="pull-right">Next case study</a>
+      <a href="{{nextCS}}" class="pull-right">Next case study >></a>
     {{/if}}
   </div>
 </section>

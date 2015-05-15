@@ -6,7 +6,6 @@ var path = require('path'),
   jshint = require('gulp-jshint'),
   notify = require('gulp-notify'),
   concat = require('gulp-concat'),
-  // concat = require('gulp-concat-sourcemap'),
   plumber = require('gulp-plumber'),
   uncss = require('gulp-uncss'),
   zopfli = require('gulp-zopfli'),
@@ -27,6 +26,7 @@ var path = require('path'),
   browserify = require('browserify'),
   source = require('vinyl-source-stream'),
   buffer = require('vinyl-buffer'),
+  clean = require('gulp-clean'),
 
   awspublish = require('gulp-awspublish'),
   parallelize = require('concurrent-transform'),
@@ -65,33 +65,14 @@ var htmlPages = [
   './case-studies-2/**/*'
 ];
 
+var cloudfrontOrigin = 'd2u6q8s5aws5dl.cloudfront.net';
+
 gulp.task('connect', function() {
   return connect.server({
     port: 3000,
     livereload: true
   });
 });
-
-// JS tasks
-// gulp.task('js', function() {
-//   browserify({
-//     entries: './js/main.js',
-//     debug: true
-//   })
-//   .transform( babelify )
-//   .transform( babelify.configure({
-//     sourceMapRelative: path.join(process.pwd + '/js')
-//   }))
-//   .bundle()
-//   .pipe( source('all.js') )
-//   .pipe( buffer() )
-//   .pipe( addsrc.prepend('./js/vendor/*.js') )
-//   .pipe( concat('all.js') )
-//   .pipe( gulp.dest('./build/js/') )
-//   .pipe( connect.reload() ).on('error', function() {
-//     notify('JS task error!')
-//   })
-// });
 
 gulp.task('js', function() {
   browserify({
@@ -110,26 +91,6 @@ gulp.task('js', function() {
   .pipe( gulp.dest('./build/js') )
   .pipe( connect.reload() );
 });
-
-// gulp.task('uglify', function() {
-//   browserify({
-//     entries: './js/main.js'
-//   })
-//   .transform( babelify )
-//   .transform( babelify.configure({
-//     sourceMapRelative: path.join(process.pwd + '/js')
-//   }))
-//   .bundle()
-//   .pipe( source('all.js') )
-//   .pipe( buffer() )
-//   .pipe( uglify() )
-//   .pipe( addsrc.prepend('./js/vendor/*.js') )
-//   .pipe( concat('all.js') )
-//   .pipe( gulp.dest('./build/js/') )
-//   .pipe( connect.reload() ).on('error', function() {
-//     notify('JS task error!')
-//   })
-// });
 
 gulp.task('uglify', function() {
   var manifest = gulp.src('./build/rev-manifest.json');
@@ -217,13 +178,6 @@ gulp.task('minify-css', function() {
     .pipe( plumber() )
 });
 
-// HTML reload on changes
-// gulp.task('html', function() {
-//   return gulp.src('./*.html')
-//     .pipe( plumber() )
-//     .pipe( connect.reload() )
-// });
-
 // Images tasks
 gulp.task('img', ['img-default']);
 
@@ -267,7 +221,6 @@ gulp.task('img-deploy', function() {
 
 // HTML reload on changes
 gulp.task('html', function() {
-  // var manifest = gulp.src('./build/rev-manifest.json');
   var webpages = [
     'pages/index.hbs',
     'pages/case-studies/*.hbs'
@@ -286,7 +239,6 @@ gulp.task('html', function() {
     .pipe(handlebars({}, {
       batch : partials
     }))
-    // .pipe( rename('index.html'))
     .pipe(rename(function (path) {
       var s;
       if (path.basename !== 'index' && path.basename.indexOf('-index') > -1) {
@@ -301,10 +253,9 @@ gulp.task('html', function() {
     .pipe( connect.reload() );
 });
 
-gulp.task('html-deploy', ['compress-images'], function() {
+gulp.task('html-deploy', ['compress-resources'], function() {
   var manifest = gulp.src('./build/rev-manifest.json');
 
-  // return gulp.src('pages/index.hbs')
   var webpages = [
     'pages/index.hbs',
     'pages/case-studies/*.hbs'
@@ -339,11 +290,7 @@ gulp.task('html-deploy', ['compress-images'], function() {
 });
 
 // Deploy to S3
-gulp.task('publish', ['patch'], function() {
-  // commit files to be published
-  // gulp.src('./')
-  //   .pipe(git.add())
-  //   .pipe(git.commit('Add hashed assets'));
+gulp.task('publish', ['patch', 'clean'], function() {
 
   // create a new publisher using S3 options
   var publisher = awspublish.create({
@@ -362,11 +309,6 @@ gulp.task('publish', ['patch'], function() {
   var headersStatics = {
     'Cache-Control': 'max-age=315360000, no-transform, public'
   };
-
-  // Bump minor semver
-  // gulp.src('./package.json')
-    // .pipe(tag_version())
-    // .pipe(gulp.dest('./'));
 
   htmlPages.forEach(function (page) {
     return gulp.src(page)
@@ -410,7 +352,7 @@ gulp.task('publish', ['patch'], function() {
 });
 
 // Deploy to beta
-gulp.task('publish-beta', function() {
+gulp.task('publish-beta', ['clean'], function() {
 
   // create a new publisher using S3 options
   var publisher = awspublish.create({
@@ -427,11 +369,6 @@ gulp.task('publish-beta', function() {
   var headersStatics = {
     'Cache-Control': 'max-age=315360000, no-transform, public'
   };
-
-  // Bump minor semver
-  gulp.src('./package.json')
-    // .pipe(tag_version())
-    // .pipe(gulp.dest('./'));
 
   gulp.src(htmlPages)
     .pipe(awspublish.gzip({ ext: '.gz' }))
@@ -462,31 +399,22 @@ gulp.task('publish-beta', function() {
 
 /* Default task */
 gulp.task('default', ['connect', 'watch'], function() {
-  gulp.start('html', 'css', 'js');
+  gulp.start('html', 'css', 'js', 'img');
 });
 
-/* Build static resources */
-gulp.task('build-resources', ['css']);
-
 /* Compress static resources */
-// gulp.task('compress-resources', ['uncss', 'uglify'], function() {
-//   gulp.start('minify-css');
-// });
-
-/* Deploy task */
-// gulp.task('deploy', ['build-resources'], function() {
-//   gulp.start('compress-resources');
-// });
-
-/* Compress static resources */
-gulp.task('compress-images', ['img-deploy'], function () {
-  gulp.start('compress-resources');
-});
+gulp.task('compress-images', ['img-deploy']);
 gulp.task('compress-resources', ['uglify', 'minify-css']);
 
 /* Deploy task */
-gulp.task('deploy', /*['clean'],*/ function() {
+gulp.task('deploy', ['compress-images'], function() {
   gulp.start('html-deploy');
+});
+
+/* Clean before publish */
+gulp.task('clean', function () {
+  return gulp.src('./build', {read: false})
+    .pipe(clean());
 });
 
 /* Watch task */

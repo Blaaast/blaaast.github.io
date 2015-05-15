@@ -1,0 +1,18 @@
+.case-study-footer-timeline {
+  z-index: -1;
+  padding: 130px 0;
+  background-color: #F6F6F6;
+}
+
+.twitter-tweet {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 450px) {
+  .twitter-tweet {
+    width: 50% !important;
+    padding: 0 5px !important;
+    margin-top: 0 !important;
+  }
+}

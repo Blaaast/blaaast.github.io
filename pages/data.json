@@ -7,8 +7,8 @@
     "Web development",
     "Responsive web design",
     "Web design",
-    "Multi-accounts/roles back-office",
-    "Data analysis"
+    "Back-office multi-comptes/rôles",
+    "Analyse de données"
   ],
   "next-1": "/case-studies-2",
 
@@ -17,11 +17,23 @@
     "value": "View the website"
   },
   "skills-2": [
-    "Web development",
-    "Responsive web design",
-    "Web design",
-    "Multi-accounts/roles back-office",
-    "Data analysis"
+    "Formation"
   ],
-  "prev-2": "/case-studies-1"
+  "tweet-ids": [
+    "597764071660908544",
+    "598560075381366785",
+    "598414198478090240"
+  ],
+  "prev-2": "/case-studies-1",
+  "next-2": "/case-studies-3",
+
+  "cta-3": {
+    "url": "https://apply.ticketforchange.org",
+    "value": "View the website"
+  },
+  "skills-3": [
+    "App development",
+    "API development"
+  ],
+  "prev-3": "/case-studies-2"
 }

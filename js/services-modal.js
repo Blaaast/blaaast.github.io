@@ -49,13 +49,13 @@ export default class Modal {
     modal.style.display = 'block';
     modalBackdrop.style.display = 'block';
 
-    const dialogHeight = parseFloat(modalDialog.offsetHeight + 60);
-    const windowHeight = parseFloat(window.innerHeight + 60);
-    const largestHeight = dialogHeight < windowHeight
-      ? windowHeight
-      : dialogHeight;
+    // const dialogHeight = parseInt(modalDialog.offsetHeight + 60, 10);
+    // const windowHeight = parseInt(window.innerHeight + 60, 10);
+    // const largestHeight = dialogHeight < windowHeight
+    //   ? windowHeight
+    //   : dialogHeight;
 
-    modalBackdrop.style.height = parseFloat(largestHeight) + 'px';
+    // modalBackdrop.style.height = largestHeight + 'px';
     modal.classList.add('in');
     modalBackdrop.classList.add('in');
   }

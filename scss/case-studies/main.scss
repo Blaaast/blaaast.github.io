@@ -1,3 +1,6 @@
+@import './footer-video';
+@import './footer-timeline';
+
 .case-study-header {
   padding: 0;
   height: 80%;
@@ -17,6 +20,12 @@
 }
 .case-study-footer-1 {
   background-image: url(/build/img/cs/1-footer.png);
+}
+.case-study-header-2 {
+  background-image: url(/build/img/cs/2.png);
+}
+.case-study-header-3 {
+  background-image: url(/build/img/cs/3.png);
 }
 
 .cs-title {
@@ -57,11 +66,11 @@
 
 .cs-skills {
   z-index: 10;
-  padding: 40px;
+  padding: 30px;
   background-color: $brand-orange;
   color: #fff;
   width: 320px;
-  margin: 100px 0 -100px;
+  margin: 100px 0 -50px;
 
   h2 {
     margin-top: 0;
@@ -88,10 +97,13 @@
     border: 0;
     background: #F2F2F2;
     padding: 30px;
+    font-size: 24px;
+    font-family: "fairviewregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     &:hover {
       background: $brand-orange;
       color: #fff;
+      text-decoration: none;
     }
   }
 }

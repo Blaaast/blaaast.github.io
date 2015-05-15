@@ -81,7 +81,7 @@
   </nav>
 
   <article>
-    <section class="case-study-header case-study-header-2">
+    <section class="case-study-header case-study-header-3">
       <div class="container">
     
         <p>
@@ -95,14 +95,14 @@
       <div class="container">
     
         <h1 class="cs-title">
-          Digital Day
-          <small>Client: GrDF</small>
+          Neocity
+          <small>Client: Neocity</small>
         </h1>
     
         <div class="row">
     
           <div class="col-md-4">
-            <p class="cs-intro">Ticket for Change is a french start-up which goal is to gather young people around subjects that matters with their “Tour de France of Social Entrepreneuship”</p>
+            <p class="cs-intro">Neocity est une jeune start-up française qui propose aux mairies un outil de communication global avec leurs citoyens.</p>
     
               <p class="cs-cta"><a href="https://apply.ticketforchange.org">View the website</a></p>
           </div>
@@ -110,7 +110,7 @@
           <div class="col-md-offset-1 col-md-7">
     
             <div class="cs-content">
-              <p>The applications they receive for this “Tour de France” are growing, and managing them is hard. They came to Blaaast to get a solution to better manage the applications they receive.</p><p>The key challenge of this project was to define the data needed to rate and pick the right participants for this “Tour de France”. We worked closely with the client to understand the skills needed by the participants to fit in their program.</p><p>This research work helped us create a taylor-made platform that gave our client exactly what he needed to focus on choosing the best participants: an easy to use interface for people applying for the “Tour de France” and a powerful back-office for correctors.</p><p>We used Node.js and Ember.js, two leading web technologies, to provide a fluid user experience coupled with powerful algorythms and optimal security.</p><p>Our client had full access to all the data in real-time thanks to live database exports to Google Spreadsheet (ranking of each participants who has validated its application and which application has been corrected).</p><p>As a result, 1200 accounts were created and Ticket for Change was able to easily process all this data to find its 50 special participants.</p>
+              <p>Nous avons réalisé une application complète pour Neocity: une application mobile pour Android et Apple ainsi qu’un back-end qui envoie la donnée vers les applications et qui réceptionne les envois des citoyens (question à la mairie, déclaration d’un sinistre...).</p><p>L’application est prête à suivre Neocity dans son évolution: lorsque de nouvelles mairies seront ajoutées à l’offre Neocity, ils pourront ajouter toute la donnée nécessaire depuis leur back-office et ainsi scaler horizontalement.</p>
             </div>
     
           </div>
@@ -133,74 +133,18 @@
     </section>
 
     
-    
-      <section class="case-study-footer-timeline">
-    
+      <section class="case-study-footer-video">
         <div class="container">
-          <div id="masonry"></div>
+          <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cTxYQKmz-dw" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js" charset="utf-8"></script>
-        <script>window.twttr = (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0],t = window.twttr || {};if (d.getElementById(id)) return t;js = d.createElement(s);js.id = id;js.src = "https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, "script", "twitter-wjs"));</script>
-    
-        <script>
-          twttr.ready(function (twttr) {
-    
-            var timer = 0;
-    
-            twttr.events.bind('loaded', function(event) { console.log('loaded'); });
-    
-            var ids = [597764071660908544,598560075381366785,598414198478090240];
-    
-            var container = document.querySelector('#masonry');
-            var msnry = new Masonry( container, {
-              itemSelector: '.twitter-tweet'
-            });
-    
-            twttr.widgets.createTweet(
-              '597764071660908544',
-              document.getElementById('masonry')
-            )
-            .then(function (el) {
-              msnry.appended( el );
-              msnry.layout();
-            });
-    
-            twttr.widgets.createTweet(
-              '598560075381366785',
-              document.getElementById('masonry')
-            )
-            .then(function (el) {
-              msnry.appended( el );
-              msnry.layout();
-            });
-    
-            twttr.widgets.createTweet(
-              '598760931099865088',
-              document.getElementById('masonry')
-            )
-            .then(function (el) {
-              msnry.appended( el );
-              msnry.layout();
-            });
-    
-            twttr.widgets.createTweet(
-              '598513738916978688',
-              document.getElementById('masonry')
-            )
-            .then(function (el) {
-              msnry.appended( el );
-              msnry.layout();
-            });
-    
-          });
-        </script>
       </section>
+    
     
     <section class="cs-nav">
       <div class="container clearfix">
-          <a href="/case-studies-1" class="pull-left"><< Previous case study</a>
-          <a href="/case-studies-3" class="pull-right">Next case study >></a>
+          <a href="/case-studies-2" class="pull-left"><< Previous case study</a>
       </div>
     </section>
     
