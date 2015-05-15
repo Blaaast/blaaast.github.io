@@ -1,6 +1,6 @@
 {
   "name": "blaaast.github.io",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "The website of Blaaast",
   "main": "gulpfile.js",
   "devDependencies": {
