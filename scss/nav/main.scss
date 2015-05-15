@@ -3,6 +3,12 @@
   -webkit-transform: translateZ(0);
 }
 
+.navbar-inverse .navbar-nav > .active > a {
+  &:focus {
+    background-color: $brand-orange;
+  }
+}
+
 .navbar-inverse {
   background: #000;
   border: none;
@@ -98,6 +104,8 @@
 
     > a {
       font-size: 26px;
+      -webkit-transition: all 0.3s ease-out;
+              transition: all 0.3s ease-out;
     }
   }
   .navbar.navbar-inverse & > li > .navbar-twitter {

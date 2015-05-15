@@ -62,7 +62,8 @@ var htmlPages = [
   './index.html',
   './case-studies/**/*',
   './case-studies-1/**/*',
-  './case-studies-2/**/*'
+  './case-studies-2/**/*',
+  './case-studies-3/**/*'
 ];
 
 var cloudfrontOrigin = 'd2u6q8s5aws5dl.cloudfront.net';
@@ -205,7 +206,8 @@ gulp.task('img-clients', function() {
     .pipe( gulp.dest('build/img/clients') );
 });
 
-gulp.task('img-deploy', function() {
+gulp.task('img-deploy', ['clean'], function() {
+
   return gulp.src('img/**')
     .pipe( plumber() )
     .pipe( rev() )
@@ -290,7 +292,7 @@ gulp.task('html-deploy', ['compress-resources'], function() {
 });
 
 // Deploy to S3
-gulp.task('publish', ['patch', 'clean'], function() {
+gulp.task('publish', ['patch'], function() {
 
   // create a new publisher using S3 options
   var publisher = awspublish.create({
@@ -352,7 +354,7 @@ gulp.task('publish', ['patch', 'clean'], function() {
 });
 
 // Deploy to beta
-gulp.task('publish-beta', ['clean'], function() {
+gulp.task('publish-beta', function() {
 
   // create a new publisher using S3 options
   var publisher = awspublish.create({

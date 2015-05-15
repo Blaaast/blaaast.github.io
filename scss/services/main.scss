@@ -1,17 +1,17 @@
 .services-slide {
-  background-color: #F7F7F7;
+  background-color: #fff;
   overflow: hidden;
 }
 
 .services {
   list-style: none;
-  margin: 0;
+  // margin: 0;
   padding: 0;
-  margin: 50px auto 50px;
+  // margin: 50px auto 50px;
 }
 
 .services__title {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   margin-bottom: 0;
   text-align: center;
   color: #000;
@@ -36,88 +36,46 @@
 .services__item__title {
   color: #000;
   margin: 0;
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .services__item__body {
   margin-top: 0;
   color: #7d7d7d;
+  line-height: 24px;
 }
 
-// Custom breakpoint
+.services__item__img {
+  float: left;
+  width: 87px;
+  max-width: 100%;
+  margin-right: 20px;
+}
+
+.services__item__content {
+  overflow: hidden;
+}
+
 @media (min-width: 450px) {
-  .services__item {
-    float: left;
-    max-width: 100%;
-    width: 50%;
+  .services__item__img {
+    width: 140px;
   }
 }
 
-// For sm screens
 @media (min-width: $screen-sm-min) {
-  .services-slide {
-    min-height: 750px;
-  }
-  .services {
-    width: 440px;
-    height: 440px;
-    margin: 35px auto;
-  }
-  .services__title {
-    text-align: left;
-    margin-top: -55px;
-  }
   .services__item {
-    color: $bg-grey;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    max-width: auto;
+    text-align: center;
   }
-  .services-container {
-    background-color: #fff;
-    position: absolute;
-      top: 50%;
-      left: 50%;
-    margin-left: -250px;
-    margin-top: -250px;
-    width: 500px;
-    height: 500px;
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-}
 
-// For md screens
-@media (min-width: $screen-md-min) {
-  .services-container {
-    margin-left: -300px;
-    margin-top: -300px;
-    width: 600px;
-    height: 600px;
+  .services__item__name {
+    margin-top: 20px;
   }
-  .services {
-    width: 500px;
-    height: 500px;
-    margin: 50px auto;
-  }
-  .services__tech {
-    padding: 40px;
-  }
-  .services__newmarket {
-    padding: 40px;
-    padding-left: 0;
-  }
-  .services__training {
-    padding: 30px;
-  }
-  .services__positive {
-    padding: 20px;
-    padding-right: 0;
-  }
-}
 
-// For lg screens
-@media (min-width: $screen-lg-min) {
-
+  .services__item__img {
+    float: none;
+    margin-right: 0;
+    width: 140px;
+  }
 }
