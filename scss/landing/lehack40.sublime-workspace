@@ -1,0 +1,786 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin-t",
+				"margin-bottom"
+			],
+			[
+				"bor-",
+				"border-bottom"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"de",
+				"defaultText"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"acces",
+				"access_token"
+			],
+			[
+				"user",
+				"createdUser"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"scro",
+				"scrollBottom"
+			],
+			[
+				"pr",
+				"profileCards"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"modal",
+				"modalBackdrop"
+			],
+			[
+				"close",
+				"closeModal"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"show",
+				"showServiceDetails"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"back-c",
+				"background-color"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"li",
+				"lis	list-style"
+			],
+			[
+				"background-",
+				"background-image"
+			],
+			[
+				"ls",
+				"list-style"
+			],
+			[
+				"mn",
+				"min-width"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"ine",
+				"inline-block"
+			],
+			[
+				"bor-c",
+				"border-color"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"auth",
+				"authURLs"
+			],
+			[
+				"public",
+				"publicRoutesList"
+			],
+			[
+				"pu",
+				"publicRoutesList"
+			],
+			[
+				"is",
+				"isAuthorized"
+			],
+			[
+				"route",
+				"routeDescription"
+			],
+			[
+				"corre",
+				"isCorrector"
+			],
+			[
+				"crea",
+				"created_by"
+			],
+			[
+				"adm",
+				"adminLen"
+			],
+			[
+				"inde",
+				"indexOfAdmin"
+			],
+			[
+				"in",
+				"indexOfCorrector"
+			],
+			[
+				"co",
+				"correction"
+			],
+			[
+				"Form",
+				"FormService"
+			],
+			[
+				"corr",
+				"correction"
+			],
+			[
+				"se",
+				"sendCorrections"
+			],
+			[
+				"cor",
+				"correction"
+			],
+			[
+				"coo",
+				"correction"
+			],
+			[
+				"cmm",
+				"communication"
+			],
+			[
+				"lea",
+				"lead"
+			],
+			[
+				"appl",
+				"application"
+			],
+			[
+				"ques",
+				"questions"
+			],
+			[
+				"use",
+				"usersArray"
+			],
+			[
+				"hiring",
+				"hiring-ticket-api"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 291.0,
+		"last_filter": "emmet re",
+		"selected_items":
+		[
+			[
+				"emmet re",
+				"Emmet: Reload Extensions"
+			],
+			[
+				"emmet",
+				"Emmet: Reload Extensions"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"babe",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"next",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"hand",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 434.0,
+		"history":
+		[
+			"sublime.log_commands(True)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/tom/blaaast/projects/lehack40"
+	],
+	"file_history":
+	[
+		"/Users/tom/blaaast/projects/lehack40/gulpfile.js",
+		"/Users/tom/blaaast/projects/lehack40/.gitignore",
+		"/Users/tom/blaaast/projects/lehack40/scss/main.scss",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/tagline.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/nav.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
+		"/Users/tom/blaaast/projects/lehack40/index.html",
+		"/Users/tom/blaaast/projects/lehack40/pages/index.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/sub-footer.hbs",
+		"/Users/tom/blaaast/projects/lehack40/scss/base/typography.scss",
+		"/Users/tom/blaaast/projects/lehack40/scss/global/layout.scss",
+		"/Users/tom/blaaast/projects/lehack40/scss/nav/main.scss",
+		"/Users/tom/blaaast/projects/lesentier/website/assets/css/user.style.css",
+		"/Users/tom/blaaast/projects/lesentier/website/index.html",
+		"/Users/tom/blaaast/blaaast.github.io/gulpfile.js",
+		"/Users/tom/blaaast/projects/youthup/gulpfile.js",
+		"/Users/tom/dev/ember/ember-jobs/app/routes/index.js",
+		"/Users/tom/dev/ember/ember-jobs/app/controllers/index.js",
+		"/Users/tom/dev/ember/ember-jobs/app/controllers/job.js",
+		"/Users/tom/dev/ember/ember-jobs/app/adapters/application.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/advice.html",
+		"/Users/tom/blaaast/projects/RCI/app/scss/utility.scss",
+		"/Users/tom/blaaast/projects/RCI/app/scss/ionic.app.scss",
+		"/Users/tom/blaaast/projects/RCI/app/scss/ionic-components/lists.scss",
+		"/Users/tom/blaaast/projects/RCI/app/scss/ionic-components/buttons.scss",
+		"/Users/tom/blaaast/projects/RCI/app/scss/ionic-components/forms.scss",
+		"/Users/tom/blaaast/projects/RCI/app/scss/global.scss",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/tab-results.html",
+		"/Users/tom/blaaast/projects/RCI/app/www/js/app.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/tabs.html",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/solutions/detail.html",
+		"/Users/tom/blaaast/projects/RCI/app/scss/forms.scss",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/expenses/detail.html",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/tab-expenses.html",
+		"/Users/tom/blaaast/projects/RCI/app/scss/progress-bars.scss",
+		"/Users/tom/blaaast/projects/RCI/app/www/js/controllers.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/tab-solutions.html",
+		"/Users/tom/blaaast/projects/RCI/app/scss/voiture-settings.scss",
+		"/Users/tom/blaaast/projects/RCI/app/www/lib/ionic/scss/_tabs.scss",
+		"/Users/tom/blaaast/projects/RCI/app/www/lib/ionic/scss/_variables.scss",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/tab-home.html",
+		"/Users/tom/blaaast/projects/RCI/app/scss/icons.scss",
+		"/Users/tom/blaaast/projects/RCI/app/gulpfile.js",
+		"/Users/tom/Downloads/icomoon/style.css",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/tab-bilan.html",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/directives/voiture-settings.html",
+		"/Users/tom/blaaast/projects/RCI/app/www/js/directives/voiture-settings.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/directives/btn-group-item.html",
+		"/Users/tom/blaaast/projects/RCI/app/www/js/directives/btn-group-item.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/js/directives/btn-group.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/directives/btn-group.html",
+		"/Users/tom/blaaast/projects/RCI/app/www/index.html",
+		"/Users/tom/blaaast/projects/RCI/app/www/js/directives/tutorial.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/tutorial.html",
+		"/Users/tom/blaaast/projects/RCI/app/www/js/directives.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/js/controllers/tutorial.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/lib/ionic/js/ionic-angular.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/js/services.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/dist/all.js",
+		"/Users/tom/blaaast/projects/RCI/app/www/templates/tab-dash.html",
+		"/Users/tom/blaaast/projects/RCI/app/ionic.project",
+		"/Users/tom/blaaast/projects/youthup/scss/nav/main.scss",
+		"/Users/tom/blaaast/projects/youthup/scss/variables.scss",
+		"/Users/tom/blaaast/projects/youthup/scss/landing/main.scss",
+		"/Users/tom/blaaast/projects/youthup/js/tweet-tagline/index.js",
+		"/Users/tom/blaaast/projects/youthup/pages/homepage/landing.hbs",
+		"/Users/tom/blaaast/projects/youthup/pages/partials/nav.hbs",
+		"/Users/tom/blaaast/projects/youthup/pages/homepage/about.hbs",
+		"/Users/tom/blaaast/projects/youthup/pages/homepage/footer.hbs",
+		"/Users/tom/blaaast/projects/youthup/pages/homepage/signup.hbs",
+		"/Users/tom/blaaast/projects/youthup/js/smooth-scroll/index.js",
+		"/Users/tom/blaaast/projects/youthup/scss/components/center-middle.scss",
+		"/Users/tom/blaaast/blueprints/vm-doc/docker.md",
+		"/Users/tom/blaaast/projects/youthup/Dockerfile",
+		"/Users/tom/blaaast/projects/youthup/build/css/main-20d2a123.css",
+		"/Users/tom/blaaast/projects/youthup/build/rev-manifest.json",
+		"/Users/tom/blaaast/projects/youthup/index.html",
+		"/Users/tom/blaaast/projects/youthup/pages/index.hbs",
+		"/Users/tom/blaaast/projects/youthup/.awspublish-youthup-static",
+		"/Users/tom/blaaast/projects/youthup/scss/main.scss",
+		"/Users/tom/blaaast/projects/youthup/scss/base/bootstrap/_forms.scss",
+		"/Users/tom/blaaast/projects/youthup/js/main.js",
+		"/Users/tom/blaaast/projects/youthup/js/modal/index.js",
+		"/Users/tom/blaaast/projects/youthup/package.json",
+		"/Users/tom/blaaast/projects/youthup/.gitignore",
+		"/Users/tom/blaaast/projects/youthup/hello.html",
+		"/Users/tom/blaaast/projects/youthup/build/main-39dedc14.css",
+		"/Users/tom/blaaast/projects/youthup/rev-manifest.json",
+		"/Users/tom/blaaast/projects/youthup/build/js/all-0a75b204.js",
+		"/Users/tom/blaaast/projects/youthup/build/js/all.js",
+		"/Users/tom/blaaast/projects/youthup/pages/index.json",
+		"/Users/tom/blaaast/projects/youthup/pages/index.handlebars",
+		"/Users/tom/blaaast/projects/youthup/pages/partials/test.handlebars",
+		"/Users/tom/blaaast/projects/youthup/scss/base/bootstrap/mixins/_vendor-prefixes.scss",
+		"/Users/tom/blaaast/projects/youthup/scss/signup/main.scss",
+		"/Users/tom/blaaast/projects/youthup/scss/footer/main.scss",
+		"/Users/tom/blaaast/projects/youthup/scss/global/layout.scss",
+		"/Users/tom/blaaast/projects/youthup/scss/about/main.scss",
+		"/Users/tom/blaaast/projects/youthup/scss/base/font.scss",
+		"/Users/tom/blaaast/projects/youthup/img/hashtag.svg",
+		"/Users/tom/blaaast/projects/youthup/build/img/hashtag.svg",
+		"/Users/tom/blaaast/projects/youthup/js/modal/services-modal.js",
+		"/Users/tom/blaaast/projects/youthup/scss/base/typography.scss",
+		"/Users/tom/blaaast/projects/youthup/scss/base/bootstrap/mixins/_image.scss",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/spaces/index/template.hbs",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/router.js",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/config/environment.js",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/pages/template.hbs",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/spaces/index/route.js",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/spaces/template.hbs",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/routes/index.js",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/templates/index.hbs",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/templates/components/nav/top-bar.hbs",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/.ember-cli",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/pages/index/template.hbs",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/pages/edit/template.hbs",
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/pages/detail/template.hbs",
+		"/Users/tom/blaaast/projects/cms/api/api/entries/index.js",
+		"/Users/tom/blaaast/projects/cms/api/api/blocks/config.json",
+		"/Users/tom/blaaast/projects/cms/api/api/block/test.js",
+		"/Users/tom/blaaast/projects/cms/api/api/authentication/test.js",
+		"/Users/tom/blaaast/projects/cms/api/api/authentication/index.js",
+		"/Users/tom/blaaast/projects/cms/api/tests/helpers/authentication.js",
+		"/Users/tom/blaaast/projects/cms/api/api/users/test.js"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"/Users/tom/dev/ember/ember-jobs/app",
+			"/Users/tom/blaaast/projects/RCI/app/www/lib/ionic/scss",
+			"/Users/tom/blaaast/projects/RCI/app/www/lib",
+			"/Users/tom/blaaast/projects/RCI/app/www/lib/ionic",
+			"/Users/tom/blaaast/projects/RCI/app/www/lib",
+			"/Users/tom/blaaast/projects/RCI/app/www",
+			"/Users/tom/blaaast/projects/youthup/scss/base/bootstrap",
+			"/Users/tom/blaaast/projects/youthup",
+			"/Users/tom/blaaast/projects/youthup/scss/base/bootstrap",
+			"/Users/tom/blaaast/projects/cms/api",
+			"/Users/tom/blaaast/projects/lesentier/website/assets/js",
+			"/Users/tom/blaaast/blaaast.github.io/scss",
+			"/Users/tom/blaaast/projects/digital-minded/scss",
+			"/Users/tom/blaaast/projects/player/landing/scss",
+			"/Users/tom/blaaast/projects/player/landing",
+			"/Users/tom/blaaast/projects/lesentier/website/assets/css",
+			"/Users/tom/blaaast/projects/lesentier/website/assets",
+			"/Users/tom/blaaast/projects/lesentier/landing/css",
+			"/Users/tom/blaaast/projects/lesentier/landing",
+			"/Users/tom/blaaast/projects/lesentier/landing/css",
+			"/Users/tom/blaaast/projects/lesentier/landing/sass",
+			"/Users/tom/blaaast/projects/lesentier/landing/css",
+			"/Users/tom/blaaast/projects/lesentier/landing/js",
+			"/Users/tom/blaaast/projects/lesentier/website/assets/js",
+			"/Users/tom/blaaast/projects/hiring@ticket/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/api/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app/styles/tooltip",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app/styles",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app/styles/tooltip",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app/templates",
+			"/Users/tom/blaaast/projects/hiring@ticket/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/api/models",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app",
+			"/Users/tom/blaaast/projects/hiring@ticket/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app/templates",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app/routes",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app",
+			"/Users/tom/blaaast/projects/hiring@ticket/api/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app",
+			"/Users/tom/blaaast/projects/hiring@ticket/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/api/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/api/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app/templates",
+			"/Users/tom/blaaast/projects/hiring@ticket/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app/templates",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app",
+			"/Users/tom/blaaast/projects/hiring@ticket/api/node_modules/koa-ratelimit",
+			"/Users/tom/blaaast/projects/hiring@ticket/api",
+			"/Users/tom/blaaast/projects/hiring@ticket/api/models",
+			"/Users/tom/blaaast/projects/hiring@ticket/hiring-ticket/app/templates",
+			"/app",
+			".app",
+			"app",
+			"hiring-ticket/app",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".pipe(publisher.sync())",
+			"publish",
+			"email",
+			"company",
+			"email",
+			"Blaaast",
+			"Blaaast /\\\\\\",
+			"Digital Acceleration",
+			"partners",
+			"argument",
+			"{{> ",
+			"Partenaires",
+			"services__item__img",
+			"new-marketing",
+			"emmanuel",
+			">\n\n        </div>",
+			"</div>",
+			"p",
+			"<div class=\"stand__item",
+			"people__",
+			"html",
+			"case",
+			"they-support",
+			"partner-title",
+			"page-title",
+			"handlebars",
+			"rev",
+			"static",
+			"center-inline",
+			"pbm",
+			"pull-icon-right",
+			"<strong>",
+			"results",
+			"list-pan",
+			"detail",
+			"block-center",
+			"older=\"0\">\n      </label>",
+			"rci-currency-sign",
+			"220px",
+			"list-pan",
+			"ass=\"input-label\">",
+			"rci-amount-field__label",
+			"0",
+			"rci-amount-field",
+			"item-input",
+			"older=\"100\">",
+			"expensesdetails",
+			" tabs-striped",
+			"tab-item-active",
+			"tab-item.tab-item-active",
+			"tabs-",
+			"tab",
+			"-tab",
+			"tab-",
+			"item-divider",
+			"ion-ios-chatboxes-outline",
+			"icon-rci-home",
+			"div",
+			"<p>",
+			"DiDesel",
+			"brand-warning",
+			" $",
+			"progress bars",
+			"progress-bars",
+			"progress",
+			"Energie",
+			"ChatEcs",
+			"account",
+			"AccoResultsunt",
+			"<a href=\"#\" class=\"item\">",
+			"chat",
+			"tab-chats",
+			"chats",
+			"Citadine",
+			"Kilométrage",
+			"depenses",
+			"dash",
+			"Dash",
+			"dash",
+			"voiture-settings__btn-group",
+			"Hybride",
+			"<button",
+			"button>",
+			"button",
+			"argument",
+			"directive",
+			"ion-",
+			"ionView",
+			"android",
+			"tab",
+			"Dashboard",
+			"tutorial",
+			"argument",
+			"starter",
+			"Starter",
+			"starter",
+			"clean",
+			"argument",
+			"deploy",
+			"html-deploy",
+			"commit",
+			"To #youthup democracy...",
+			"landing-title__edit",
+			"href",
+			"/usr/src/app/",
+			"url(",
+			"js-twitter-button",
+			"tweetBtn",
+			"tweetInput",
+			"tweet-it",
+			"placeholder",
+			"all",
+			"autoprefixer",
+			"autopr",
+			"js-tweet-tagline",
+			"show-input",
+			"landingTitle",
+			"selectModal",
+			"js-tweet-input",
+			"TweetTagline",
+			"inlinesource",
+			"zopfli",
+			"phantom",
+			"app",
+			"gulp",
+			"\"",
+			"html-deploy",
+			"bump"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"blaaastCmsBookshelf"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/tom/blaaast/projects/lehack40"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 325.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

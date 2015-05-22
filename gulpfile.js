@@ -306,7 +306,8 @@ gulp.task('publish', ['patch'], function() {
 
   // define custom header s
   var headers = {
-    'Content-Type': 'text/html'
+    'Content-Type': 'text/html',
+    'Cache-Control': 'public, must-revalidate, proxy-revalidate, max-age=0'
   }; // No cache for index.html
   var headersStatics = {
     'Cache-Control': 'max-age=315360000, no-transform, public'
@@ -367,7 +368,9 @@ gulp.task('publish-beta', function() {
   });
 
   // define custom headers
-  var headers = {};
+  var headers = {
+    'Cache-Control': 'public, must-revalidate, proxy-revalidate, max-age=0'
+  };
   var headersStatics = {
     'Cache-Control': 'max-age=315360000, no-transform, public'
   };

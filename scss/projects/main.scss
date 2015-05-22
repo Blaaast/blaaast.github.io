@@ -35,7 +35,25 @@
 }
 
 .projects-item__cta {
-  // text-transform: uppercase;
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  padding: 10px;
+  margin-bottom: 0;
+
+  a {
+    background: #fff;
+    color: #000;
+    display: block;
+    line-height: 49px;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+      background: darken(#fff, 5%);
+    }
+  }
 }
 
 .projects-overlay {
@@ -73,9 +91,9 @@
   padding: 30px;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-60%);
+      -ms-transform: translateY(-60%);
+          transform: translateY(-60%);
 }
 
 .projects-overlay__seemore {
