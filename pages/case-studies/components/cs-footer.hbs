@@ -25,51 +25,48 @@
     <script>
       twttr.ready(function (twttr) {
 
-        var timer = 0;
-
-        twttr.events.bind('loaded', function(event) { console.log('loaded'); });
-
-        var ids = [{{tweet-ids}}];
+        var ids = [{{{tweet-ids}}}];
 
         var container = document.querySelector('#masonry');
         var msnry = new Masonry( container, {
           itemSelector: '.twitter-tweet'
         });
 
-        twttr.widgets.createTweet(
+        twttr.events.bind('rendered', function(event) {
+          var tweets = document.querySelectorAll('.twitter-tweet');
+          msnry.layout();
+        });
+
+        return twttr.widgets.createTweet(
           '597764071660908544',
           document.getElementById('masonry')
         )
         .then(function (el) {
           msnry.appended( el );
-          msnry.layout();
-        });
 
-        twttr.widgets.createTweet(
-          '598560075381366785',
-          document.getElementById('masonry')
-        )
-        .then(function (el) {
-          msnry.appended( el );
-          msnry.layout();
-        });
+          return twttr.widgets.createTweet(
+            '598560075381366785',
+            document.getElementById('masonry')
+          );
 
-        twttr.widgets.createTweet(
-          '598760931099865088',
-          document.getElementById('masonry')
-        )
-        .then(function (el) {
+        }).then(function (el) {
           msnry.appended( el );
-          msnry.layout();
-        });
 
-        twttr.widgets.createTweet(
-          '598513738916978688',
-          document.getElementById('masonry')
-        )
-        .then(function (el) {
+          return twttr.widgets.createTweet(
+            '598760931099865088',
+            document.getElementById('masonry')
+          );
+
+        }).then(function (el) {
           msnry.appended( el );
-          msnry.layout();
+
+          return twttr.widgets.createTweet(
+            '598513738916978688',
+            document.getElementById('masonry')
+          );
+
+        }).then(function (el) {
+          msnry.appended( el );
         });
 
       });

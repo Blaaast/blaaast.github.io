@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"text-",
+				"text-transform"
+			],
+			[
 				"margin-t",
 				"margin-bottom"
 			],
@@ -18,10 +22,6 @@
 			[
 				"padd",
 				"padding-bottom"
-			],
-			[
-				"text-",
-				"text-align"
 			],
 			[
 				"de",
@@ -235,6 +235,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/tom/blaaast/projects/lehack40/pages/data.json",
+			"settings":
+			{
+				"buffer_size": 35,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -243,8 +251,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 291.0,
-		"last_filter": "emmet re",
+		"height": 375.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -316,7 +324,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 561.0
+		"width": 453.0
 	},
 	"console":
 	{
@@ -338,20 +346,32 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/tom/blaaast/projects/lehack40"
+		"/Users/tom/blaaast/projects/lehack40",
+		"/Users/tom/blaaast/projects/lehack40/js",
+		"/Users/tom/blaaast/projects/lehack40/pages",
+		"/Users/tom/blaaast/projects/lehack40/scss"
 	],
 	"file_history":
 	[
+		"/Users/tom/blaaast/projects/lehack40/pages/data.json",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
+		"/Users/tom/blaaast/projects/lehack40/scss/footer.scss",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer.hbs",
+		"/Users/tom/blaaast/projects/lehack40/scss/landing.scss",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
+		"/Users/tom/blaaast/projects/lehack40/js/form.js",
+		"/Users/tom/blaaast/projects/lehack40/js/main.js",
+		"/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/sub-footer.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/tagline.hbs",
+		"/Users/tom/blaaast/projects/lehack40/scss/base/bootstrap/mixins/_image.scss",
+		"/Users/tom/blaaast/projects/lehack40/scss/offer.scss",
+		"/Users/tom/blaaast/projects/lehack40/img/Modélisation.svg",
 		"/Users/tom/blaaast/projects/lehack40/gulpfile.js",
 		"/Users/tom/blaaast/projects/lehack40/.gitignore",
 		"/Users/tom/blaaast/projects/lehack40/scss/main.scss",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/tagline.hbs",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer.hbs",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/nav.hbs",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
-		"/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
 		"/Users/tom/blaaast/projects/lehack40/index.html",
 		"/Users/tom/blaaast/projects/lehack40/pages/index.hbs",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/sub-footer.hbs",
@@ -460,16 +480,7 @@
 		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/templates/index.hbs",
 		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/templates/components/nav/top-bar.hbs",
 		"/Users/tom/blaaast/projects/cms/blaaast-cms/.ember-cli",
-		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/pages/index/template.hbs",
-		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/pages/edit/template.hbs",
-		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/pages/detail/template.hbs",
-		"/Users/tom/blaaast/projects/cms/api/api/entries/index.js",
-		"/Users/tom/blaaast/projects/cms/api/api/blocks/config.json",
-		"/Users/tom/blaaast/projects/cms/api/api/block/test.js",
-		"/Users/tom/blaaast/projects/cms/api/api/authentication/test.js",
-		"/Users/tom/blaaast/projects/cms/api/api/authentication/index.js",
-		"/Users/tom/blaaast/projects/cms/api/tests/helpers/authentication.js",
-		"/Users/tom/blaaast/projects/cms/api/api/users/test.js"
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/pages/index/template.hbs"
 	],
 	"find":
 	{
@@ -480,6 +491,7 @@
 		"height": 95.0,
 		"where_history":
 		[
+			"/Users/tom/blaaast/projects/lehack40/scss",
 			"/Users/tom/dev/ember/ember-jobs/app",
 			"/Users/tom/blaaast/projects/RCI/app/www/lib/ionic/scss",
 			"/Users/tom/blaaast/projects/RCI/app/www/lib",
@@ -544,6 +556,35 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ooter__email\">",
+			"footer__email",
+			"<p>",
+			"hidden",
+			"footer",
+			"Form",
+			"var",
+			"blaaast",
+			"Le digital accélère l'innovation",
+			"Blaaast",
+			"blaaast",
+			"Blaaast",
+			"ww.blaaast.co",
+			"publish",
+			"separator",
+			"separator-small",
+			"strong",
+			"retina",
+			"col-sm-4",
+			"<img src=",
+			"img/",
+			"stand__item",
+			"offer__icon",
+			"<img ",
+			"<h2",
+			"offer-list",
+			"<h2",
+			"<li>",
+			"Iterations",
 			".pipe(publisher.sync())",
 			"publish",
 			"email",
@@ -642,36 +683,7 @@
 			"starter",
 			"clean",
 			"argument",
-			"deploy",
-			"html-deploy",
-			"commit",
-			"To #youthup democracy...",
-			"landing-title__edit",
-			"href",
-			"/usr/src/app/",
-			"url(",
-			"js-twitter-button",
-			"tweetBtn",
-			"tweetInput",
-			"tweet-it",
-			"placeholder",
-			"all",
-			"autoprefixer",
-			"autopr",
-			"js-tweet-tagline",
-			"show-input",
-			"landingTitle",
-			"selectModal",
-			"js-tweet-input",
-			"TweetTagline",
-			"inlinesource",
-			"zopfli",
-			"phantom",
-			"app",
-			"gulp",
-			"\"",
-			"html-deploy",
-			"bump"
+			"deploy"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -696,8 +708,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/tom/blaaast/projects/lehack40/pages/data.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 35,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -755,9 +796,25 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "you",
 		"selected_items":
 		[
+			[
+				"you",
+				"~/blaaast/youthup.sublime-workspace"
+			],
+			[
+				"",
+				"~/blaaast/econocar.sublime-workspace"
+			],
+			[
+				"pla",
+				"~/blaaast/projects/lehack40/player-lp.sublime-workspace"
+			],
+			[
+				"lese",
+				"~/blaaast/lesentier.sublime-workspace"
+			]
 		],
 		"width": 380.0
 	},
