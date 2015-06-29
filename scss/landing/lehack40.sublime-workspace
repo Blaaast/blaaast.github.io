@@ -236,10 +236,18 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/tom/blaaast/projects/lehack40/pages/data.json",
+			"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
 			"settings":
 			{
-				"buffer_size": 35,
+				"buffer_size": 1772,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
+			"settings":
+			{
+				"buffer_size": 5159,
 				"line_ending": "Unix"
 			}
 		}
@@ -347,12 +355,14 @@
 	"expanded_folders":
 	[
 		"/Users/tom/blaaast/projects/lehack40",
-		"/Users/tom/blaaast/projects/lehack40/js",
 		"/Users/tom/blaaast/projects/lehack40/pages",
-		"/Users/tom/blaaast/projects/lehack40/scss"
+		"/Users/tom/blaaast/projects/lehack40/pages/homepage",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials"
 	],
 	"file_history":
 	[
+		"/Users/tom/blaaast/projects/lehack40/gulpfile.js",
+		"/Users/tom/blaaast/projects/lehack40/package.json",
 		"/Users/tom/blaaast/projects/lehack40/pages/data.json",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
 		"/Users/tom/blaaast/projects/lehack40/scss/footer.scss",
@@ -368,7 +378,6 @@
 		"/Users/tom/blaaast/projects/lehack40/scss/base/bootstrap/mixins/_image.scss",
 		"/Users/tom/blaaast/projects/lehack40/scss/offer.scss",
 		"/Users/tom/blaaast/projects/lehack40/img/Modélisation.svg",
-		"/Users/tom/blaaast/projects/lehack40/gulpfile.js",
 		"/Users/tom/blaaast/projects/lehack40/.gitignore",
 		"/Users/tom/blaaast/projects/lehack40/scss/main.scss",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/nav.hbs",
@@ -479,8 +488,7 @@
 		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/routes/index.js",
 		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/templates/index.hbs",
 		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/templates/components/nav/top-bar.hbs",
-		"/Users/tom/blaaast/projects/cms/blaaast-cms/.ember-cli",
-		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/pages/index/template.hbs"
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/.ember-cli"
 	],
 	"find":
 	{
@@ -556,6 +564,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"quotes",
+			"homepage",
+			"canonicalUrl",
+			"details.description",
+			".title",
+			"http://www.lehack40.fr/",
+			"imagemin",
+			"gulp-imagemin",
+			"imageResize",
+			"pngquant",
+			"zopfl",
 			"ooter__email\">",
 			"footer__email",
 			"<p>",
@@ -672,18 +691,7 @@
 			"argument",
 			"directive",
 			"ion-",
-			"ionView",
-			"android",
-			"tab",
-			"Dashboard",
-			"tutorial",
-			"argument",
-			"starter",
-			"Starter",
-			"starter",
-			"clean",
-			"argument",
-			"deploy"
+			"ionView"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -708,32 +716,64 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/tom/blaaast/projects/lehack40/pages/data.json",
+					"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 35,
+						"buffer_size": 1772,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1190,
+								1190
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1146,
+								1146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -796,16 +836,20 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "you",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"you",
+				"",
 				"~/blaaast/youthup.sublime-workspace"
 			],
 			[
-				"",
-				"~/blaaast/econocar.sublime-workspace"
+				"yout",
+				"~/blaaast/youthup.sublime-workspace"
+			],
+			[
+				"you",
+				"~/blaaast/youthup.sublime-workspace"
 			],
 			[
 				"pla",

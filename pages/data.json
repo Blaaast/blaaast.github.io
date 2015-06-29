@@ -4,10 +4,10 @@
     "value": "View the website"
   },
   "skills-1": [
-    "Web development",
+    "Web development (Ember.js SPA)",
     "Responsive web design",
     "Web design",
-    "Back-office multi-comptes/rôles",
+    "Back-office multi-comptes/rôles (node.js)",
     "Analyse de données"
   ],
   "next-1": "/case-studies-2",
@@ -32,8 +32,8 @@
     "value": "View the website"
   },
   "skills-3": [
-    "App development",
-    "API development"
+    "App development (iOS and Android)",
+    "API development (node.js)"
   ],
-  "prev-3": "/case-studies-2"
+  "prev-3": "/case-studies-1"
 }
