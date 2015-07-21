@@ -236,18 +236,18 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
+			"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
 			"settings":
 			{
-				"buffer_size": 1772,
+				"buffer_size": 753,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
+			"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
 			"settings":
 			{
-				"buffer_size": 5159,
+				"buffer_size": 1465,
 				"line_ending": "Unix"
 			}
 		}
@@ -357,31 +357,33 @@
 		"/Users/tom/blaaast/projects/lehack40",
 		"/Users/tom/blaaast/projects/lehack40/pages",
 		"/Users/tom/blaaast/projects/lehack40/pages/homepage",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials"
+		"/Users/tom/blaaast/projects/lehack40/pages/partials",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer"
 	],
 	"file_history":
 	[
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/tagline.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
 		"/Users/tom/blaaast/projects/lehack40/gulpfile.js",
+		"/Users/tom/blaaast/projects/lehack40/.gitignore",
+		"/Users/tom/blaaast/projects/lehack40/index.html",
 		"/Users/tom/blaaast/projects/lehack40/package.json",
+		"/Users/tom/blaaast/projects/lehack40/js/form.js",
+		"/Users/tom/blaaast/projects/lehack40/node_modules/gulp-uncss/node_modules/uncss/node_modules/phridge/node_modules/phantomjs/README.md",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
 		"/Users/tom/blaaast/projects/lehack40/pages/data.json",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
 		"/Users/tom/blaaast/projects/lehack40/scss/footer.scss",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer.hbs",
 		"/Users/tom/blaaast/projects/lehack40/scss/landing.scss",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
-		"/Users/tom/blaaast/projects/lehack40/js/form.js",
 		"/Users/tom/blaaast/projects/lehack40/js/main.js",
-		"/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/sub-footer.hbs",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/tagline.hbs",
 		"/Users/tom/blaaast/projects/lehack40/scss/base/bootstrap/mixins/_image.scss",
 		"/Users/tom/blaaast/projects/lehack40/scss/offer.scss",
 		"/Users/tom/blaaast/projects/lehack40/img/Modélisation.svg",
-		"/Users/tom/blaaast/projects/lehack40/.gitignore",
 		"/Users/tom/blaaast/projects/lehack40/scss/main.scss",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/nav.hbs",
-		"/Users/tom/blaaast/projects/lehack40/index.html",
 		"/Users/tom/blaaast/projects/lehack40/pages/index.hbs",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/sub-footer.hbs",
 		"/Users/tom/blaaast/projects/lehack40/scss/base/typography.scss",
@@ -487,8 +489,7 @@
 		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/pods/spaces/template.hbs",
 		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/routes/index.js",
 		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/templates/index.hbs",
-		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/templates/components/nav/top-bar.hbs",
-		"/Users/tom/blaaast/projects/cms/blaaast-cms/.ember-cli"
+		"/Users/tom/blaaast/projects/cms/blaaast-cms/app/templates/components/nav/top-bar.hbs"
 	],
 	"find":
 	{
@@ -499,6 +500,7 @@
 		"height": 95.0,
 		"where_history":
 		[
+			"/Users/tom/blaaast/projects/lehack40/node_modules",
 			"/Users/tom/blaaast/projects/lehack40/scss",
 			"/Users/tom/dev/ember/ember-jobs/app",
 			"/Users/tom/blaaast/projects/RCI/app/www/lib/ionic/scss",
@@ -564,6 +566,36 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"name",
+			"email",
+			"name",
+			"contact.",
+			"Votre message",
+			"company",
+			"Votre email",
+			"name",
+			"Votre entreprise",
+			"Votre nom",
+			"fabrice.tranier@digital-minded.fr",
+			"sofian@blaaast.co",
+			"offer",
+			"first",
+			"source",
+			"browserify",
+			"transpile",
+			"sourcemaps",
+			"addsrc",
+			"changed",
+			"rename",
+			"imageResize",
+			"inlinesource",
+			"notify",
+			"phantomjs",
+			"require('phantom",
+			"phantom",
+			"chalk",
+			"gulp-sass",
+			"gulp-util",
 			"quotes",
 			"homepage",
 			"canonicalUrl",
@@ -661,37 +693,7 @@
 			"item-divider",
 			"ion-ios-chatboxes-outline",
 			"icon-rci-home",
-			"div",
-			"<p>",
-			"DiDesel",
-			"brand-warning",
-			" $",
-			"progress bars",
-			"progress-bars",
-			"progress",
-			"Energie",
-			"ChatEcs",
-			"account",
-			"AccoResultsunt",
-			"<a href=\"#\" class=\"item\">",
-			"chat",
-			"tab-chats",
-			"chats",
-			"Citadine",
-			"Kilométrage",
-			"depenses",
-			"dash",
-			"Dash",
-			"dash",
-			"voiture-settings__btn-group",
-			"Hybride",
-			"<button",
-			"button>",
-			"button",
-			"argument",
-			"directive",
-			"ion-",
-			"ionView"
+			"div"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -716,24 +718,54 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
+					"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1772,
+						"buffer_size": 753,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1190,
-								1190
+								753,
+								753
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1448,
+								1448
 							]
 						],
 						"settings":
@@ -747,36 +779,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5159,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1146,
-								1146
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -836,9 +838,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "econ",
 		"selected_items":
 		[
+			[
+				"econ",
+				"~/blaaast/econocar.sublime-workspace"
+			],
 			[
 				"",
 				"~/blaaast/youthup.sublime-workspace"
