@@ -235,22 +235,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
-			"settings":
-			{
-				"buffer_size": 753,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
-			"settings":
-			{
-				"buffer_size": 1465,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -356,27 +340,25 @@
 	[
 		"/Users/tom/blaaast/projects/lehack40",
 		"/Users/tom/blaaast/projects/lehack40/pages",
-		"/Users/tom/blaaast/projects/lehack40/pages/homepage",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer"
+		"/Users/tom/blaaast/projects/lehack40/pages/homepage"
 	],
 	"file_history":
 	[
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/tagline.hbs",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer.hbs",
 		"/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
 		"/Users/tom/blaaast/projects/lehack40/gulpfile.js",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
+		"/Users/tom/blaaast/projects/lehack40/package.json",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/tagline.hbs",
+		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer.hbs",
 		"/Users/tom/blaaast/projects/lehack40/.gitignore",
 		"/Users/tom/blaaast/projects/lehack40/index.html",
-		"/Users/tom/blaaast/projects/lehack40/package.json",
 		"/Users/tom/blaaast/projects/lehack40/js/form.js",
 		"/Users/tom/blaaast/projects/lehack40/node_modules/gulp-uncss/node_modules/uncss/node_modules/phridge/node_modules/phantomjs/README.md",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/head.hbs",
 		"/Users/tom/blaaast/projects/lehack40/pages/data.json",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
 		"/Users/tom/blaaast/projects/lehack40/scss/footer.scss",
 		"/Users/tom/blaaast/projects/lehack40/scss/landing.scss",
-		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
 		"/Users/tom/blaaast/projects/lehack40/js/main.js",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/sub-footer.hbs",
 		"/Users/tom/blaaast/projects/lehack40/scss/base/bootstrap/mixins/_image.scss",
@@ -566,6 +548,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tech",
 			"name",
 			"email",
 			"name",
@@ -692,8 +675,7 @@
 			"tab-",
 			"item-divider",
 			"ion-ios-chatboxes-outline",
-			"icon-rci-home",
-			"div"
+			"icon-rci-home"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -718,69 +700,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/footer/contact.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 753,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								753,
-								753
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1465,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1448,
-								1448
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
