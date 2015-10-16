@@ -338,12 +338,11 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/tom/blaaast/projects/lehack40",
-		"/Users/tom/blaaast/projects/lehack40/pages",
-		"/Users/tom/blaaast/projects/lehack40/pages/homepage"
+		"/Users/tom/blaaast/projects/lehack40"
 	],
 	"file_history":
 	[
+		"/Users/tom/blaaast/projects/lehack40/.gitignore",
 		"/Users/tom/blaaast/projects/lehack40/pages/homepage/article.hbs",
 		"/Users/tom/blaaast/projects/lehack40/gulpfile.js",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/form.hbs",
@@ -351,7 +350,6 @@
 		"/Users/tom/blaaast/projects/lehack40/package.json",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer/tagline.hbs",
 		"/Users/tom/blaaast/projects/lehack40/pages/partials/footer.hbs",
-		"/Users/tom/blaaast/projects/lehack40/.gitignore",
 		"/Users/tom/blaaast/projects/lehack40/index.html",
 		"/Users/tom/blaaast/projects/lehack40/js/form.js",
 		"/Users/tom/blaaast/projects/lehack40/node_modules/gulp-uncss/node_modules/uncss/node_modules/phridge/node_modules/phantomjs/README.md",
@@ -759,9 +757,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "econ",
+		"last_filter": "ticket",
 		"selected_items":
 		[
+			[
+				"ticket",
+				"~/blaaast/workspaces/ticketlive.sublime-workspace"
+			],
 			[
 				"econ",
 				"~/blaaast/econocar.sublime-workspace"
