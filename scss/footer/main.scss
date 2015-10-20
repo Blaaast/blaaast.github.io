@@ -1,26 +1,76 @@
 .footer-slide {
-  background: $brand-blood-orange;
+  background: $brand-orange;
   padding: 40px 0;
 }
 
 .footer-logo {
+  margin: 70px 0 20px;
   text-align: center;
 
   img {
-    max-width: 210px;
+    max-width: 130px;
+  }
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 10px;
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+.contact-list__icon {
+  color: #8D2200;
+  font-size: 18px;
+  margin-right: 3px;
+}
+
+.contact__address {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-social {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    i::before {
+      font-size: 20px;
+      color: #fff;
+    }
+
+    &:first-child {
+      margin-right: 20px;
+    }
   }
 }
 
 .footer-text {
-  font-size: 25px;
+  font-size: 11px;
   text-align: center;
   margin: 0;
-  color: $brand-orange;
+  color: #8D2200;
   font-family: $headings-font-family;
+  padding-bottom: 8px;
 }
 
 .footer-legal {
-  color: $bg-white;
+  color: #8D2200;
+  font-size: 11px;
 
   &:hover {
     color: $bg-stripe-white;

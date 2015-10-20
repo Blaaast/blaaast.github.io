@@ -1,20 +1,23 @@
 // Limit to desktop size (no HD)
-$grid-gutter-width:         30px;
-$screen-lg:                 980px;
-$container-large-desktop:   (940px + $grid-gutter-width);
+// $grid-gutter-width:         30px;
+// $screen-lg:                 980px;
+// $container-large-desktop:   (940px + $grid-gutter-width);
 
 //fairviewregular
-$headings-font-family: "fairviewregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $brand-grey:          #9d9d9c;
-$brand-orange:        #E44A2B;
+$brand-orange:        #EE3A00;
 $brand-blood-orange:  #A62207;
 
-$bg-grey:             #958799;
 $bg-purple:           #39303a;
 $bg-dark-purple:      #252026;
 $bg-stripe-white:     #f6f6f6;
 $bg-white:            #ededed;
+
+$bg-grey:             #1E1E1E;
+$text-grey:           #7D7D7D;
+$dark-grey:           #7A7A7A;
 
 // Font awesome
 $fa-font-path:        '../../fonts';

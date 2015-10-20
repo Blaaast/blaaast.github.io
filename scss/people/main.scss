@@ -1,13 +1,5 @@
 .people-slide {
-  -webkit-background-size: 20px 20px;
-  -moz-background-size: 20px 20px;
-  background-size: 20px 20px;
-
-  background-color: #2B2B2B;
-
-  h1 {
-    color: #fff;
-  }
+  background-color: #fff;
 }
 
 .people__list {
@@ -16,7 +8,7 @@
 }
 
 .people__item {
-  margin: 0 auto;
+  // margin: 0 auto;
   max-width: 350px;
   padding-bottom: 20px;
   text-align: left;
@@ -24,12 +16,13 @@
 
 .people__item__name,
 .people__item__body {
-  color: #fff;
+  font-size: 22px;
+  color: #000;
 }
 
 .people__item__body {
   font-size: 16px;
-  color: #bbb;
+  color: $dark-grey;
 }
 
 .people__item__twitter {

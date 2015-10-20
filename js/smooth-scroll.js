@@ -12,7 +12,7 @@ export default class Modal {
 
     [].forEach.call(navLinks, (el) => {
       el.addEventListener('click', (ev) => {
-        let navLinksActive = document.querySelectorAll('.js-nav-link');
+        let navLinksActive = document.querySelectorAll('.js-smooth-link, .js-nav-link');
         const elClasses = ev.target.classList;
 
         [].forEach.call(navLinksActive, (el) => {
@@ -20,6 +20,10 @@ export default class Modal {
         });
 
         ev.preventDefault();
+
+        if (!ev.target.href) {
+          return this.smoothScroll(ev.target.parentNode.href.split('#')[1]);
+        }
         this.smoothScroll(ev.target.href.split('#')[1]);
 
         if (elClasses.contains('js-nav-link') && !elClasses.contains('active')) {

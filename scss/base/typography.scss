@@ -1,9 +1,18 @@
-h1, .h1 {
-  // text-transform: uppercase;
+body {
+  font-family: $headings-font-family;
 }
 
 .title-center {
-  font-size: 55px;
-  margin: 70px 0 70px;
+  font-size: 30px;
+  margin: 70px 0 30px;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitle-center {
+  margin: 0 auto 80px;
+  font-size: 14px;
+  color: $dark-grey;
+  text-align: center;
+  max-width: 480px;
 }

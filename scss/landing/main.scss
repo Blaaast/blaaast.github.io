@@ -18,10 +18,13 @@
 
 .landing-arrow {
   position: absolute;
-    bottom: 50px;
-    left: 50%;
-  margin-left: -32px;
-  width: 64px;
-  height: 64px;
-  background: transparent url(/build/img/arrow.svg) 0 0 no-repeat;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+  text-align: center;
+
+  i::before {
+    font-size: 50px;
+    color: #fff;
+  }
 }

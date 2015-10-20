@@ -1,14 +1,12 @@
 .projects-slide {
-  .row {
-    margin: 0;
-  }
+
 }
 
 .projects-title {
   color: #000;
 }
 
-.projects-item {
+.project-item {
   position: relative;
   text-align: center;
   margin-bottom: 30px;
@@ -17,86 +15,21 @@
 
 .project-item__imagewrap {
   margin: 0;
-  -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.10);
-  box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.10);
 }
 
-.projects-item__img {
+.project-item__img {
   max-width: 100%;
 }
 
-.projects-item__title {
-  font-size: 36px;
-  color: #fff;
+.project-item__title {
+  font-size: 14px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-.projects-skill {
-  color: #fff;
-}
-
-.projects-item__cta {
-  position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  padding: 10px;
-  margin-bottom: 0;
-
-  a {
-    background: #fff;
-    color: #000;
-    display: block;
-    line-height: 49px;
-    font-weight: bold;
-
-    &:hover {
-      text-decoration: none;
-      background: darken(#fff, 5%);
-    }
-  }
-}
-
-.projects-overlay {
-  position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 15px;
-    left: 15px;
-  color: $bg-grey;
-  background: rgba(227,73,43,0.90);
-
-  @include transition(all .5s cubic-bezier(0.000, 0.630, 0.190, 0.985));
-
-  -webkit-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
-     -moz-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
-       -o-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
-          transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
-
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
-
-  .projects-item:hover & {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-.projects-overlay__content {
-  color: $brand-orange;
-  position: absolute;
-    top: 50%;
-  width: 100%;
-  padding: 30px;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-  -webkit-transform: translateY(-60%);
-      -ms-transform: translateY(-60%);
-          transform: translateY(-60%);
-}
-
-.projects-overlay__seemore {
-  // color, bg, border
-  @include button-variant(#fff, $brand-orange, $brand-blood-orange);
+.project-item__description {
+  font-size: 12px;
+  text-align: left;
 }

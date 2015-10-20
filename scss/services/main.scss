@@ -1,22 +1,15 @@
 .services-slide {
-  background-color: #fff;
+  background-color: $bg-grey;
   overflow: hidden;
 }
 
 .services {
   list-style: none;
-  // margin: 0;
   padding: 0;
-  // margin: 50px auto 50px;
 }
 
-.services__title {
-  // text-transform: uppercase;
-  margin-bottom: 0;
-  text-align: center;
-  color: #000;
-  font-size: 50px;
-  margin: 40px 0 0;
+.services-title {
+  color: #fff;
 }
 
 .services__item {
@@ -29,13 +22,15 @@
 }
 
 .services__item__img {
-  width: 129px;
+  width: 200px;
   padding-bottom: 20px;
+  line-height: 100px;
 }
 
 .services__item__title {
-  color: #000;
+  color: #fff;
   margin: 0;
+  font-size: 24px;
   // text-transform: uppercase;
   margin-bottom: 5px;
 }
@@ -59,7 +54,7 @@
 
 @media (min-width: 450px) {
   .services__item__img {
-    width: 140px;
+    width: 200px;
   }
 }
 
@@ -76,7 +71,7 @@
   .services__item__img {
     float: none;
     margin-right: 0;
-    width: 140px;
+    width: 200px;
     min-height: 92px;
   }
 }
