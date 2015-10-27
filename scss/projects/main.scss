@@ -1,5 +1,29 @@
 .projects-slide {
+  padding-bottom: 80px;
 
+  // &::before {
+  //   content: ' ';
+  //   position: absolute;
+  //     top: calc(100vw / -#{$section-angle} + 1px);
+  //   width: 0;
+  //   height: 0;
+  //   border-top-width: calc(100vw / #{$section-angle});
+  //   border-top-style: solid;
+  //   border-top-color: transparent;
+  //   border-right: 100vw solid #fff;
+  //   overflow: hidden;
+  // }
+}
+
+.intro-title {
+  font-size: 30px;
+  margin: 90px 0 70px;
+  text-align: center;
+
+  span {
+    font-family: $bold-font-family;
+    color: $brand-orange;
+  }
 }
 
 .projects-title {
@@ -15,16 +39,40 @@
 
 .project-item__imagewrap {
   margin: 0;
+  position: relative;
+
+  img {
+    display: block;
+  }
+
+  a {
+    display: block;
+    position: absolute;
+      right: 0;
+      bottom: 0;
+    background: $brand-primary;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 8px;
+    transition: all .3s ease-out;
+    font-family: $classic-font-family;
+
+    &:hover {
+      text-decoration: none;
+      background: darken($brand-primary, 10%);
+    }
+  }
 }
 
 .project-item__img {
   max-width: 100%;
+  box-shadow: 0 0 5px rgba(0,0,0,.10);
 }
 
 .project-item__title {
+  font-family: $bold-font-family;
   font-size: 14px;
   text-align: left;
-  font-weight: bold;
   margin-top: 10px;
   margin-bottom: 5px;
 }

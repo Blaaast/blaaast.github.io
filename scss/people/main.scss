@@ -8,7 +8,7 @@
 }
 
 .people__item {
-  // margin: 0 auto;
+  margin: 0 auto;
   max-width: 350px;
   padding-bottom: 20px;
   text-align: left;
@@ -68,5 +68,9 @@
     float: none;
     margin-right: 0;
     width: 140px;
+  }
+
+  .col-sm-offset-1 {
+    margin-left: 8.33333% !important;
   }
 }

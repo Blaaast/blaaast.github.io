@@ -1,6 +1,33 @@
 .services-slide {
   background-color: $bg-grey;
-  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+      top: calc(100vw / -#{$section-angle} + 1px);
+    width: 0;
+    height: 0;
+    border-top-width: calc(100vw / #{$section-angle});
+    border-top-style: solid;
+    border-top-color: transparent;
+    border-right: 100vw solid $bg-grey;
+    overflow: hidden;
+  }
+
+  &::after {
+    content: ' ';
+    position: absolute;
+      top: calc(100%);
+    width: 0;
+    height: 0;
+    border-bottom-width: calc(100vw / #{$section-angle});
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    border-left: 100vw solid $bg-grey;
+    z-index: 10;
+    overflow: hidden;
+  }
 }
 
 .services {
@@ -10,6 +37,7 @@
 
 .services-title {
   color: #fff;
+  margin-top: 100px;
 }
 
 .services__item {
@@ -21,9 +49,12 @@
   color: $bg-grey;
 }
 
+.services__item__imgwrap {
+  float: left;
+}
+
 .services__item__img {
   width: 200px;
-  padding-bottom: 20px;
   line-height: 100px;
 }
 
@@ -52,13 +83,11 @@
   overflow: hidden;
 }
 
-@media (min-width: 450px) {
+@media (min-width: $screen-sm-min) {
   .services__item__img {
     width: 200px;
   }
-}
 
-@media (min-width: $screen-sm-min) {
   .services__item {
     max-width: auto;
     text-align: center;
@@ -66,6 +95,12 @@
 
   .services__item__name {
     margin-top: 20px;
+  }
+
+  .services__item__imgwrap {
+    height: 100px;
+    margin-bottom: 20px;
+    float: none;
   }
 
   .services__item__img {

@@ -1,5 +1,18 @@
 .contact-slide {
   background: $brand-orange;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+      top: calc(100vw / -#{$section-angle} + 1px);
+    width: 0;
+    height: 0;
+    border-top-width: calc(100vw / #{$section-angle});
+    border-top-style: solid;
+    border-top-color: transparent;
+    border-right: 100vw solid #{$brand-orange};
+    overflow: hidden;
+  }
 }
 
 .contact-title {

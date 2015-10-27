@@ -1,6 +1,33 @@
 .clients-slide {
   background: #F7F7F7;
   padding-top: 30px;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+      top: calc(100vw / -#{$section-angle} + 1px);
+    width: 0;
+    height: 0;
+    border-top-width: calc(100vw / #{$section-angle});
+    border-top-style: solid;
+    border-top-color: transparent;
+    border-right: 100vw solid #F7F7F7;
+    overflow: hidden;
+  }
+
+  &::after {
+    content: ' ';
+    position: absolute;
+      top: calc(100%);
+    width: 0;
+    height: 0;
+    border-bottom-width: calc(100vw / #{$section-angle});
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    border-left: 100vw solid #F7F7F7;
+    z-index: 10;
+    overflow: hidden;
+  }
 }
 
 .clients-list {
@@ -31,6 +58,12 @@
 }
 .clients-item__tall {
   line-height: 270px;
+}
+
+@media (max-width: 450px) {
+  .col-xs-4 {
+    width: 100%;
+  }
 }
 
 @media (min-width: $screen-sm-min) {

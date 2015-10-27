@@ -4,7 +4,10 @@
 // $container-large-desktop:   (940px + $grid-gutter-width);
 
 //fairviewregular
+$text-font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headings-font-family: "raleway-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$bold-font-family: "raleway-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$classic-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $brand-grey:          #9d9d9c;
 $brand-orange:        #EE3A00;
@@ -21,6 +24,9 @@ $dark-grey:           #7A7A7A;
 
 // Font awesome
 $fa-font-path:        '../../fonts';
+
+// Section angle
+$section-angle:       70;
 
 // Bootstrap variables
 $brand-primary:       $brand-orange;
