@@ -35,7 +35,11 @@ export default class Modal {
 
   smoothScroll(el) {
     let element = document.querySelector(`#${el}`);
-    Velocity(element, "scroll", { duration: 600, easing: "easeOutSine" });
+    Velocity(element, "scroll", {
+      duration: 600,
+      easing: "easeOutSine",
+      offset: -50
+    });
   }
 
 }

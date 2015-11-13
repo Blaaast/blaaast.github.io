@@ -17,12 +17,18 @@
 
 .intro-title {
   font-size: 30px;
-  margin: 90px 0 70px;
+  margin: 90px 0 90px;
   text-align: center;
 
   span {
     font-family: $bold-font-family;
     color: $brand-orange;
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  .intro-title {
+    font-size: 40px;
   }
 }
 
