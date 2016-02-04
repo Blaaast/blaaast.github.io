@@ -61,8 +61,12 @@
 }
 
 @media (max-width: 450px) {
+  .clients-list .row {
+    text-align: center;
+  }
   .col-xs-4 {
-    width: 100%;
+    float: none;
+    width: 225px;
   }
 }
 

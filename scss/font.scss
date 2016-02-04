@@ -33,3 +33,28 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'sf-light';
+    src: url('../../fonts/sf/SFUIDisplay-Light.eot');
+    src: url('../../fonts/sf/SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/sf/SFUIDisplay-Light.woff2') format('woff2'),
+         url('../../fonts/sf/SFUIDisplay-Light.woff') format('woff'),
+         url('../../fonts/sf/SFUIDisplay-Light.ttf') format('truetype'),
+         url('../../fonts/sf/SFUIDisplay-Light.svg#SF') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sf';
+    src: url('../../fonts/sf/SFUIText-Regular.eot');
+    src: url('../../fonts/sf/SFUIText-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/sf/SFUIText-Regular.woff2') format('woff2'),
+         url('../../fonts/sf/SFUIText-Regular.woff') format('woff'),
+         url('../../fonts/sf/SFUIText-Regular.ttf') format('truetype'),
+         url('../../fonts/sf/SFUIText-Regular.svg#SF') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

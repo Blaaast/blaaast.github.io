@@ -3,8 +3,14 @@
   <section class="landing-slide">
     <div class="container">
 
-      <img src="/build/img/logo-blaaast.svg" class="landing-logo" width="287"
+      <div class="landing-wrapper">
+        <img src="/build/img/logo-blaaast.svg" class="landing-logo" width="287"
            onerror="this.onerror=null; this.src = '/build/img/logo-blaaast.png'">
+
+        <div class="landing-separator"></div>
+
+        <span class="intro-title">La puissance du <span>digital</span> et de la <span>co-création</span><br>pour <span>accélérer</span> les organisations.</span>
+      </div>
 
       <p>
         <a href="#projects" class="landing-arrow js-smooth-link">
@@ -16,151 +22,173 @@
   </section>
 
 
-  <section class="services-slide">
+  {{!-- <section class="services-slide">
     <div class="container">
 
-      <h5 class="services-title intro-title">La puissance du <span>digital</span> et de la <span>co-création</span><br>pour <span>accélérer</span> les organisations.</h5>
-
     </div>
-  </section>
+  </section> --}}
 
 
   <section id="projects" class="projects-slide">
+    {{!-- <div class="container-fluid"> --}}
     <div class="container">
 
       <h1 class="projects-title title-center">Nos derniers projets</h1>
       {{!-- <p class="subtitle-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare tincidunt accumsan. Nunc auctor massa sit amet purus lobortis imperdiet.</p> --}}
 
-      <div class="row">
+      <div class="project__items row">
 
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/Gazou.png">
-            <a target="_blank" href="http://www.gazou.fr/story/">L'histoire <i class="fa fa-long-arrow-right"></i></a>
-          </p>
-          <h2 class="project-item__title">GRDF</h2>
-          <p class="project-item__description">Co-création, Design &amp; Développement de l’application des gaziers.</p>
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="http://www.gazou.fr/story/">
+            <img class="project-item__img" src="/build/img/projects/Gazou.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">GRDF - L'appli Gazou</h2>
+                  <p class="project-item__description">Co-création, Design &amp; Développement de l’application des gaziers.</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
 
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/Ticket_Newsroom.png">
-            <a target="_blank" href="http://live.ticketforchange.org/">Site LIVE <i class="fa fa-long-arrow-right"></i></a>
-          </p>
-          <h2 class="project-item__title">Ticket for Change</h2>
-          <p class="project-item__description">Couverture digitale du Tour #Ticket2015 et site LIVE.</p>
-        </div>
-
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/Schoolab.png">
-          </p>
-          <h2 class="project-item__title">SchooLab</h2>
-          <p class="project-item__description">Stratégie de communication.</p>
-        </div>
-
-      </div>
-      <div class="row">
-
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/Player.png">
-            <a target="_blank" href="http://player.paris/">Site web <i class="fa fa-long-arrow-right"></i></a>
-          </p>
-          <h2 class="project-item__title">PLAYER</h2>
-          <p class="project-item__description">Design &amp; Développement du site web.</p>
-        </div>
-
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/Galeries.png">
-          </p>
-          <h2 class="project-item__title">Groupe Galeries Lafayette</h2>
-          <p class="project-item__description">Roadmap de la stratégie d’Open Innovation.</p>
-        </div>
-
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/GRTGaz.png">
-          </p>
-          <h2 class="project-item__title">GRTgaz</h2>
-          <p class="project-item__description">Learning Expedition pour les Directions Innovation et SI.</p>
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="http://live.ticketforchange.org/">
+            <img class="project-item__img" src="/build/img/projects/Ticket_LIVE.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">Ticket for Change</h2>
+                  <p class="project-item__description">Site LIVE pour le Tour #Ticket2015.</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
 
       </div>
-      <div class="row">
 
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/Orange.png">
-          </p>
-          <h2 class="project-item__title">Orange</h2>
-          <p class="project-item__description">Mentoring des startups en essaimage.</p>
+      <div class="project__items row">
+
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="http://player.paris/">
+            <img class="project-item__img" src="/build/img/projects/Player.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">PLAYER</h2>
+                  <p class="project-item__description">Design &amp; Développement du site web.</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
 
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/GrDF_formation.png">
-            <a target="_blank" href="http://www.blaaast.co/build/img/pdf/Blaaast_GrDF_Case_Study-7c0b3d7eed.pdf">Plaquette <i class="fa fa-long-arrow-right"></i></a>
-          </p>
-          <h2 class="project-item__title">GRDF</h2>
-          <p class="project-item__description">Journée de formation à la co-création.</p>
-        </div>
-
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/youthup.png">
-          </p>
-          <h2 class="project-item__title">European Youth Forum</h2>
-          <p class="project-item__description">Campagne de communication européenne.</p>
-        </div>
-
-      </div>
-      <div class="row">
-
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/RCI.png">
-          </p>
-          <h2 class="project-item__title">RCI Banque / Groupe Renault</h2>
-          <p class="project-item__description">Réalisation d'une application mobile pour iOS et Android.</p>
-        </div>
-
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/Douanes.png">
-          </p>
-          <h2 class="project-item__title">Douanes de France</h2>
-          <p class="project-item__description">Accompagnement dans le développement du protoype web d’un service innovant.</p>
-        </div>
-
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/HiringTicket.png">
-          </p>
-          <h2 class="project-item__title">Ticket For Change</h2>
-          <p class="project-item__description">Développement de l'application pour le recrutement du tour Ticket for Change.</p>
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="http://www.blaaast.co/build/img/pdf/Blaaast_GrDF_Case_Study-7c0b3d7eed.pdf">
+            <img class="project-item__img" src="/build/img/projects/CMGRDF.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">GRDF</h2>
+                  <p class="project-item__description">Journée de formation à la co-création.</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
 
       </div>
-      <div class="row">
+      <div class="project__items row">
 
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/Neocity.png">
-            <a target="_blank" href="https://www.youtube.com/watch?v=r9X9fJgf_qQ">Vidéo <i class="fa fa-long-arrow-right"></i></a>
-          </p>
-          <h2 class="project-item__title">Neocity</h2>
-          <p class="project-item__description">Réalisation de l’application mobile pour iOS et Android.</p>
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="http://www.youthup.eu">
+            <img class="project-item__img" src="/build/img/projects/youthUP.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">European Youth Forum</h2>
+                  <p class="project-item__description">Site d'engagement.</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
 
-        <div class="col-sm-4 project-item">
-          <p class="project-item__imagewrap">
-            <img class="project-item__img" src="/build/img/projects/new/GrDF.png">
-            <a target="_blank" href="https://storify.com/chris_angel31/digitall-5">Episode <i class="fa fa-long-arrow-right"></i></a>
-          </p>
-          <h2 class="project-item__title">GRDF</h2>
-          <p class="project-item__description">Formation Twitter &amp; accompagnement d'une communauté de salariés aux usages du digital.</p>
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="">
+            <img class="project-item__img" src="/build/img/projects/RCIBanque.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">RCI Banque / Groupe Renault</h2>
+                  <p class="project-item__description">Réalisation d'une application mobile pour iOS et Android.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <div class="project__items row">
+
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="">
+            <img class="project-item__img" src="/build/img/projects/Douanes.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">Douanes de France</h2>
+                  <p class="project-item__description">Accompagnement dans le développement du protoype web d’un service innovant.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="">
+            <img class="project-item__img" src="/build/img/projects/TicketRecrutement.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">Ticket For Change</h2>
+                  <p class="project-item__description">Développement de l'application pour le recrutement du tour Ticket for Change.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <div class="project__items row">
+
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="https://www.youtube.com/watch?v=r9X9fJgf_qQ">
+            <img class="project-item__img" src="/build/img/projects/neocity.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">Neocity</h2>
+                  <p class="project-item__description">Réalisation de l’application mobile pour iOS et Android.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-6 project-item">
+          <a class="project-item__imagewrap" target="_blank" href="http://www.lesentier.paris">
+            <img class="project-item__img" src="/build/img/projects/LeSentier.jpg">
+            <div class="project-item__overlay">
+              <div>
+                <div>
+                  <h2 class="project-item__title">Le Sentier</h2>
+                  <p class="project-item__description">Réalisation du site d'engagement.</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
 
       </div>
@@ -223,6 +251,21 @@
   </section>
 
 
+  <section id="engagement" class="engagement-slide">
+    <div class="container">
+
+      <h1 class="title-center engagement-title">Blaaast engagement</h1>
+
+      <p class="text-center engagement-body">Notre offre et méthode de co-création de produit innovant en partenariat avec les grandes organisations.</p>
+
+      <p class="engagement-cta">
+        <a target="_blank" href="http://engagement.blaaast.co">Découvrir Blaaast Engagement</a>
+      </p>
+
+    </div>
+  </section>
+
+
   <section id="team" class="people-slide">
     <div class="container">
 
@@ -233,7 +276,7 @@
 
           <div class="row">
 
-            <div class="people__item col-sm-2 col-sm-offset-1 clearfix">
+            <div class="people__item col-sm-2 col-sm-offset-2 clearfix">
               <img src="/build/img/team/sofian.jpg" class="people__pic">
               <h2 class="people__item__name">Sofian</h2>
               <p class="people__item__body">Co-founder &amp; CEO</p>
@@ -261,13 +304,6 @@
               <p class="people__item__twitter"><a href="https://twitter.com/MorganeLb16" target="_blank">@MorganeLb16</a></p>
             </div>
 
-            <div class="people__item col-sm-2 clearfix">
-              <img src="/build/img/team/marie.png" class="people__pic">
-              <h2 class="people__item__name">Marie</h2>
-              <p class="people__item__body">Project Manager</p>
-              <p class="people__item__twitter"><a href="https://twitter.com/MarieDasylva" target="_blank">@MarieDasylva</a></p>
-            </div>
-
           </div>
 
         </div>
@@ -281,7 +317,6 @@
     <div class="container">
 
       <h1 class="title-center">Références</h1>
-      {{!-- <p class="subtitle-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare tincidunt accumsan. Nunc auctor massa sit amet purus lobortis imperdiet.</p> --}}
 
       <div class="clients-list">
 
@@ -289,19 +324,19 @@
 
           <div class="col-sm-6 col-xs-12">
             <div class="row">
-              <img src="/build/img/references/galeries.png" alt="logo des Galeries Lafayette" class="clients-logo col-sm-4 col-xs-4">
+              <img src="/build/img/references/grdf.png" alt="logo de GrDF" class="clients-logo col-sm-4 col-xs-4">
+
+              <img src="/build/img/references/euroyouth.png" alt="logo du European Youth Forum" class="clients-logo col-sm-4 col-xs-4">
 
               <img src="/build/img/references/ticket.png" alt="logo de Ticket for Change" class="clients-logo col-sm-4 col-xs-4">
-
-              <img src="/build/img/references/grdf.png" alt="logo de GrDF" class="clients-logo col-sm-4 col-xs-4">
             </div>
           </div>
 
           <div class="col-sm-6 col-xs-12">
             <div class="row">
-              <img src="/build/img/references/euroyouth.png" alt="logo du European Youth Forum" class="clients-logo col-sm-4 col-xs-4">
+              <img src="/build/img/references/grtgaz.png" alt="logo de GRTgaz" class="clients-logo col-sm-4 col-xs-4">
 
-              <img src="/build/img/references/orange.png" alt="logo d'Orange'" class="clients-logo col-sm-4 col-xs-4">
+              <img src="/build/img/references/rci.png" alt="logo de RCI Banque" class="clients-logo col-sm-4 col-xs-4">
 
               <img src="/build/img/references/ministere.png" class="clients-logo col-sm-4 col-xs-4">
             </div>
@@ -313,9 +348,9 @@
 
           <div class="col-sm-6 col-xs-12">
             <div class="row">
-              <img src="/build/img/references/grtgaz.png" alt="logo de GRTgaz" class="clients-logo col-sm-4 col-xs-4">
+              <img src="/build/img/references/trax.png" alt="logo de Trax" class="clients-logo col-sm-4 col-xs-4">
 
-              <img src="/build/img/references/rci.png" alt="logo de RCI Banque" class="clients-logo col-sm-4 col-xs-4">
+              <img src="/build/img/references/igp.png" alt="logo de IGP" class="clients-logo col-sm-4 col-xs-4">
 
               <img src="/build/img/references/douanes.png" alt="logo des Douanes de France" class="clients-logo col-sm-4 col-xs-4">
             </div>
@@ -323,35 +358,13 @@
 
           <div class="col-sm-6 col-xs-12">
             <div class="row">
-              <img src="/build/img/references/trax.png" alt="logo de Trax" class="clients-logo col-sm-4 col-xs-4">
 
-              <img src="/build/img/references/numa.png" alt="logo du NUMA" class="clients-logo col-sm-4 col-xs-4">
-
-              <img src="/build/img/references/schoolab.png" alt="logo du Schoolab" class="clients-logo col-sm-4 col-xs-4">
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row">
-
-          <div class="col-sm-6 col-xs-12">
-            <div class="row">
-              <img src="/build/img/references/roger.png" alt="logo de RogerVoice" class="clients-logo col-sm-4 col-xs-4">
+              <img src="/build/img/references/bop.png" alt="logo de BOP" class="clients-logo col-sm-4 col-xs-4">
 
               <img src="/build/img/references/player.png" alt="logo de Player" class="clients-logo col-sm-4 col-xs-4">
 
               <img src="/build/img/references/neocity.png" alt="logo de Neocity" class="clients-logo col-sm-4 col-xs-4">
-            </div>
-          </div>
 
-          <div class="col-sm-6 col-xs-12">
-            <div class="row">
-              <img src="/build/img/references/sensecube.png" alt="logo du SenseCube" class="clients-logo col-sm-4 col-xs-4">
-
-              <img src="/build/img/references/auticiel.png" alt="logo de Auticiel" class="clients-logo col-sm-4 col-xs-4">
-
-              <img src="/build/img/references/senseschool.png" alt="logo du SenseSchool" class="clients-logo col-sm-4 col-xs-4">
             </div>
           </div>
 

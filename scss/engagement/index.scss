@@ -1,0 +1,53 @@
+.engagement-slide {
+  background: $engagement-blue;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+      top: calc(100%);
+    width: 0;
+    height: 0;
+    border-bottom-width: calc(100vw / #{$section-angle});
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    border-left: 100vw solid $engagement-blue;
+    z-index: 10;
+    overflow: hidden;
+  }
+}
+
+.engagement-title {
+  height: 162px;
+  width: 162px;
+  margin: 60px auto 40px;
+  text-indent: -9999px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  @include img-retina('/build/img/engagement/logo.png', '/build/img/engagement/logo@2x.png', 162px, 162px);
+}
+
+.engagement-body {
+  margin: 0 auto;
+  max-width: 560px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.engagement-cta {
+  margin: 35px 0 50px;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    margin: 0 auto;
+    background: #1B7ECD;
+    padding: 15px 25px;
+    color: #fff;
+    font-family: $bold-font-family;
+
+    &:hover {
+      background: darken(#1B7ECD, 10%);
+      text-decoration: none;
+    }
+  }
+}
