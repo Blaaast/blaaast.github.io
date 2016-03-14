@@ -4,14 +4,23 @@
 // $container-large-desktop:   (940px + $grid-gutter-width);
 
 //fairviewregular
-$text-font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$headings-font-family: "raleway-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$bold-font-family: "raleway-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$light-font-family: "raleway-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sf-light: "sf-light", "Helvetica Neue", Arial, sans-serif;
+$sf-regular: "sf", "Helvetica Neue", Arial, sans-serif;
+
+$raleway-light: "raleway", "Helvetica Neue", Arial, sans-serif;
+$raleway-bold: "raleway-bold", "Helvetica Neue", Arial, sans-serif;
+
+$text-font-family: $sf-regular;
+$headings-font-family: $sf-light;
+$bold-font-family: $sf-regular;
+$light-font-family: $sf-light;
 $classic-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$sf-light: "sf-light", Helvetica, Arial, sans-serif;
-$sf-regular: "sf", Helvetica, Arial, sans-serif;
+// $text-font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $headings-font-family: "raleway-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $bold-font-family: "raleway-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $light-font-family: "raleway-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $classic-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $brand-grey:          #9d9d9c;
 $brand-orange:        #EE3A00;
@@ -24,7 +33,7 @@ $bg-white:            #ededed;
 
 $engagement-blue:     #2196F3;
 
-$bg-grey:             #1E1E1E;
+$bg-grey:             #1A1D20;
 $text-grey:           #7D7D7D;
 $dark-grey:           #7A7A7A;
 

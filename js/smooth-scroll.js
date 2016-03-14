@@ -1,7 +1,7 @@
 // Polyfills:
 // - classList
 
-export default class Modal {
+export default class SmoothScroll {
 
   constructor() {
     this.init();

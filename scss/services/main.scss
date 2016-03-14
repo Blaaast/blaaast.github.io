@@ -98,8 +98,8 @@
   }
 
   .services__item__imgwrap {
-    height: 100px;
-    margin-bottom: 20px;
+    // height: 100px;
+    margin-bottom: 0;
     float: none;
   }
 
@@ -107,6 +107,6 @@
     float: none;
     margin-right: 0;
     width: 200px;
-    min-height: 92px;
+    max-height: 128px;
   }
 }

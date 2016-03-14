@@ -1,0 +1,34 @@
+.tagline-slide {
+  &::before {
+    content: ' ';
+    position: absolute;
+      top: calc(100vw / -#{$section-angle} + 1px);
+    width: 0;
+    height: 0;
+    border-top-width: calc(100vw / #{$section-angle});
+    border-top-style: solid;
+    border-top-color: transparent;
+    border-right: 100vw solid #fff;
+    overflow: hidden;
+  }
+}
+
+.tagline {
+  font-size: 30px;
+  margin: 90px 0 100px;
+  text-align: center;
+  color: #000;
+  font-family: $raleway-light;
+  line-height: 47px;
+
+  span {
+    color: $brand-primary;
+    font-family: $raleway-bold;
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  .tagline {
+    font-size: 40px;
+  }
+}
